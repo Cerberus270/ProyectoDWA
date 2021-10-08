@@ -1,0 +1,1 @@
+export const formularioAire = document.querySelector('#formularioAire');

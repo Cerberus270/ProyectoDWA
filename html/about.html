@@ -67,71 +67,107 @@
                                             <h6 class="card-subtitle mb-2 text-muted">API para medir la calidad del
                                                 aire, en
                                                 distintas ciudades</h6>
-                                                <p class="card-text">
-                                                    El proyecto del Índice Mundial de la Calidad del Aire es un
-                                                    proyecto sin ánimo de lucro iniciado en 2007. Su misión es promover la
-                                                    concienciación de los ciudadanos sobre la contaminación atmosférica y
-                                                    proporcionar una información unificada y mundial sobre la calidad del
-                                                    aire.
-                                                    
-                                                    El proyecto proporciona información transparente sobre la calidad del
-                                                    aire en
-                                                    más de 130 países, cubriendo más de 30.000 estaciones en 2.000 ciudades
-                                                    importantes.
-                                                    <br>
-                                                    <br>
-                                                    Más información través de estos dos sitios web: <a
+                                            <p class="card-text">
+                                                El proyecto del Índice Mundial de la Calidad del Aire es un
+                                                proyecto sin ánimo de lucro iniciado en 2007. Su misión es promover la
+                                                concienciación de los ciudadanos sobre la contaminación atmosférica y
+                                                proporcionar una información unificada y mundial sobre la calidad del
+                                                aire.
+
+                                                El proyecto proporciona información transparente sobre la calidad del
+                                                aire en
+                                                más de 130 países, cubriendo más de 30.000 estaciones en 2.000 ciudades
+                                                importantes.
+                                                <br>
+                                                <br>
+                                                Más información través de estos dos sitios web: <a
                                                     href="https://aqicn.org" target="_blank"
                                                     rel="noopener noreferrer">aqicn.org</a>
-                                                    y <a href="https://waqi.info" target="_blank"
+                                                y <a href="https://waqi.info" target="_blank"
                                                     rel="noopener noreferrer">waqi.info</a>.
-                                                </p>
-                                                <a href="#" class="btn btn-primary">Prueba de la API</a>
-                                            </div>
+                                            </p>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">Prueba de la API</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </article>
-                        <article>
-                            <div class="col">
-                                <div class="card mb-3">
-                                    <div class="row g-0">
-                                        <div class="col-md-4">
-                                            <img src="../img/carbon.png" class="img-fluid rounded-start" alt="...">
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Carbon Interface</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted">API para medir nuestras emisiones de carbono</h6>
-                                                <p class="card-text">
-                                                    Usted está aquí porque quiere hacer que su aplicación sea más consciente
-                                                    del clima. Nuestro objetivo en Carbon Interface es facilitar a los
-                                                    desarrolladores la integración de estimaciones de emisiones de carbono
-                                                    con respaldo científico en sus aplicaciones. De este modo, podemos crear
-                                                    un software que reduzca las emisiones de carbono, frenando el cambio
-                                                    climático.
-                                                    &nbsp;
-                                                    Carbon Interface ofrece dos APIs:
-                                                    <br>
-                                                    <br>
-                                                    API de estimaciones:
-                                                    La API de estimaciones facilita la generación de estimaciones precisas
-                                                    de las emisiones de los vuelos, los vehículos, el transporte marítimo,
-                                                    el consumo de electricidad y la combustión de combustibles.
-                                                    <br>
-                                                    <br>
-                                                    API de Carbon Ledger:
-                                                    La API Carbon Ledger facilita la generación de estimaciones precisas de
-                                                    emisiones a partir de transacciones con tarjetas de crédito y débito.
-                                                    <br>
-                                                    <br>
-                                                    Más información través de este sitio web: <a
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalCalidadAire"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modalCalidadAire">World Air Quality Index</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            En este modal tendras la oportunidad de probar la API
+                                        </p>
+                                        <form action="#" id="formularioAire">
+                                            <div class="mb-3">
+                                                <label for="txtCiudad" class="form-label">Ciudad</label>
+                                                <input type="text" class="form-control" id="txtCiudad"
+                                                    aria-describedby="ciudadDesc" required>
+                                                <div id="ciudadDesc" class="form-text">
+                                                    Ingrese el nombre de una ciudad para visualizar la calidad del aire.
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin Modal Calidad Aire-->
+                    </article>
+                    <article>
+                        <div class="col">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="../img/carbon.png" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Carbon Interface</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">API para medir nuestras emisiones
+                                                de carbono</h6>
+                                            <p class="card-text">
+                                                Usted está aquí porque quiere hacer que su aplicación sea más consciente
+                                                del clima. Nuestro objetivo en Carbon Interface es facilitar a los
+                                                desarrolladores la integración de estimaciones de emisiones de carbono
+                                                con respaldo científico en sus aplicaciones. De este modo, podemos crear
+                                                un software que reduzca las emisiones de carbono, frenando el cambio
+                                                climático.
+                                                &nbsp;
+                                                Carbon Interface ofrece dos APIs:
+                                                <br>
+                                                <br>
+                                                API de estimaciones:
+                                                La API de estimaciones facilita la generación de estimaciones precisas
+                                                de las emisiones de los vuelos, los vehículos, el transporte marítimo,
+                                                el consumo de electricidad y la combustión de combustibles.
+                                                <br>
+                                                <br>
+                                                API de Carbon Ledger:
+                                                La API Carbon Ledger facilita la generación de estimaciones precisas de
+                                                emisiones a partir de transacciones con tarjetas de crédito y débito.
+                                                <br>
+                                                <br>
+                                                Más información través de este sitio web: <a
                                                     href="https://docs.carboninterface.com/#/" target="_blank"
                                                     rel="noopener noreferrer">aqicn.org</a>
-                                                </p>
-                                                <a href="#" class="btn btn-primary">Prueba de la API</a>
-                                            </div>
+                                            </p>
+                                            <a href="#" class="btn btn-primary">Prueba de la API</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -141,6 +177,7 @@
             </div>
         </main>
     </header>
+    <script src="../js/about.js" type="module"></script>
 </body>
 
 </html>
