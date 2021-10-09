@@ -5,14 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Estilos Locales-->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
     </script>
+    <!--Mapas-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
     <title>About</title>
 </head>
 
@@ -107,6 +118,14 @@
                                         <p>
                                             En este modal tendras la oportunidad de probar la API
                                         </p>
+                                        <p>
+                                            El índice de calidad del aire (ICA) es una cifra que proporcionan las
+                                            autoridades de una zona (normalmente urbana) y que refleja las cantidades de
+                                            contaminantes presentes en el aire.​ Cuando la calidad del aire es buena
+                                            (tiene pocos contaminantes), las personas pueden respirarlo indefinidamente
+                                            sin que su salud se vea afectada. Cuando es mala pueden darse irritaciones
+                                            oculares, todo tipo de problemas respiratorios e incluso cardíacos.
+                                        </p>
                                         <form action="#" id="formularioAire">
                                             <div class="mb-3">
                                                 <label for="txtCiudad" class="form-label">Ciudad</label>
@@ -116,8 +135,16 @@
                                                     Ingrese el nombre de una ciudad para visualizar la calidad del aire.
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary">Visualizar</button>
                                         </form>
+                                        <br>
+                                        <div id="mensajeAire">
+                                        </div>
+                                        <div id="resultadoCalidadAire">
+                                        </div>
+                                        <br>
+                                        <div id="mapaAire">
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"

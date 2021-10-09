@@ -14,6 +14,5 @@ function buscarCalidadAire(e){
     } else{
         const busqueda = new CalidadAire(ciudad);
         busqueda.consultarAPI();
-        console.log(busqueda);
     }
 }

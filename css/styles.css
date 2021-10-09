@@ -1,3 +1,54 @@
 main{
     margin-top: 5em;
 }
+
+.aqiGood{
+    width:320px;
+    height:175px;
+    border-radius: 20px;
+    text-align: center;
+    background:#52924c;
+    color: #FFFF;
+}
+.aqiModerate{
+    width:320px;
+    height:175px;
+    border-radius: 20px;
+    text-align: center;
+    background:#fabd2b;
+    color: #FFFF;
+}
+.aqiUnhealthySensitive{
+    width:320px;
+    height:175px;
+    border-radius: 20px;
+    text-align: center;
+    background:#e27939;
+    color: #FFFF;
+}
+.aqiUnhealthy{
+    width:320px;
+    height:175px;
+    border-radius: 20px;
+    text-align: center;
+    background:#c34e5c;
+    color: #FFFF;
+}
+.aqiVeryUnhealthy{
+    width:320px;
+    height:175px;
+    border-radius: 20px;
+    text-align: center;
+    background:#9b57a3;
+    color: #FFFF;
+}
+.aqiHazardous{
+    width:320px;
+    height:175px;
+    border-radius: 20px;
+    text-align: center;
+    background:#87404e;
+    color: #FFFF;
+}
+
+#mapaAire { height: 180px; }
