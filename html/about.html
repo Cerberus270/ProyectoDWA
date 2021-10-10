@@ -249,6 +249,23 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+                                        <form action="#" id="formularioClima">
+                                            <div class="mb-3">
+                                                <label for="txtCiudadClima" class="form-label">Ciudad</label>
+                                                <input type="text" class="form-control" id="txtCiudadClima"
+                                                    aria-describedby="ciudadDesc" required>
+                                                <div id="ciudadDesc" class="form-text">
+                                                    Ingrese el nombre de una ciudad para visualizar el clima.
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="cmbPaises" class="form-label">Paises</label>
+                                                <select class="form-select" id="cmbPaises" aria-label="">
+                                                    <option selected>Seleccione un pais de la lista</option>
+                                                  </select>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Visualizar</button>
+                                        </form>
                                         <div id="mapaClima">
 
                                         </div>
