@@ -98,14 +98,14 @@
                                                     rel="noopener noreferrer">waqi.info</a>.
                                             </p>
                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal">Prueba de la API</button>
+                                                data-bs-target="#modalAQI">Prueba de la API</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalCalidadAire"
+                        <div class="modal fade" id="modalAQI" tabindex="-1" aria-labelledby="modalCalidadAire"
                             aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
@@ -140,7 +140,7 @@
                                         <br>
                                         <div id="mensajeAire">
                                         </div>
-                                        <div id="resultadoCalidadAire">
+                                        <div id="resultadoCalidadAire" class="text-center">
                                         </div>
                                         <br>
                                         <div id="mapaAire">
@@ -199,6 +199,68 @@
                                 </div>
                             </div>
                         </div>
+                    </article>
+                    <article>
+                        <div class="col">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="../img/openWeatherMap.png" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">OpenWeatherMap</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">API que nos muestra las condiciones climaticas, 
+                                                dadas las coordenadas.
+                                            </h6>
+                                            <p class="card-text">
+                                                OpenWeatherMap es un servicio en línea, propiedad de OpenWeather Ltd,
+                                                que proporciona datos meteorológicos globales a través de la API,
+                                                incluyendo datos meteorológicos actuales, previsiones, nowcasts y datos
+                                                meteorológicos históricos para cualquier ubicación geográfica. La
+                                                empresa ofrece una previsión de precipitaciones hiperlocal minuto a
+                                                minuto para cualquier lugar. El modelo de aprendizaje automático
+                                                convolucional se utiliza para utilizar los servicios de difusión
+                                                meteorológica y los datos de las estaciones meteorológicas de los
+                                                aeropuertos, las estaciones de radar en tierra, los satélites
+                                                meteorológicos, los satélites de teledetección, los METAR y las
+                                                estaciones meteorológicas automatizadas.
+                                                <br>
+                                                <br>
+                                                Más información través de este web: <a
+                                                    href="https://openweathermap.org/" target="_blank"
+                                                    rel="noopener noreferrer">openweathermap.org</a>
+                                            </p>
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalWeather">Prueba de la API</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Weather -->
+                        <div class="modal fade" id="modalWeather" tabindex="-1" aria-labelledby="textoModal"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="textoModal">Condiciones climaticas OpenWeather</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="mapaClima">
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin Modal Weather-->
                     </article>
                 </div>
             </div>

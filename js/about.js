@@ -1,5 +1,6 @@
 import * as UI from './selectores.js';
 import CalidadAire from './calidadAire.js';
+import OpenWeather from './openWeather.js';
 
 UI.formularioAire.addEventListener('submit', buscarCalidadAire);
 
@@ -12,7 +13,11 @@ function buscarCalidadAire(e){
         console.error('La ciudad es obligatoria');
         return;
     } else{
-        const busqueda = new CalidadAire(ciudad);
-        busqueda.consultarAPI();
+        const busquedaCalidadAire = new CalidadAire(ciudad);
+        busquedaCalidadAire.consultarAPI();
     }
 }
+
+const busquedaClima = new OpenWeather('Armenia','SV');
+
+busquedaClima.consultarAPI();
