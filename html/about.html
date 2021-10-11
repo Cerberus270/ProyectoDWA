@@ -253,7 +253,7 @@
                                             <div class="mb-3">
                                                 <label for="txtCiudadClima" class="form-label">Ciudad</label>
                                                 <input type="text" class="form-control" id="txtCiudadClima"
-                                                    aria-describedby="ciudadDesc" required>
+                                                    aria-describedby="ciudadDesc" required pattern="^[^\s]+(\s+[^\s]+)*$">
                                                 <div id="ciudadDesc" class="form-text">
                                                     Ingrese el nombre de una ciudad para visualizar el clima.
                                                 </div>
@@ -266,6 +266,11 @@
                                             </div>
                                             <button type="submit" class="btn btn-primary">Visualizar</button>
                                         </form>
+                                        <br>
+                                        <div id="resultadoClima" class="text-center">
+                                        </div>
+                                        <div id="mensajeClima">
+                                        </div>
                                         <div id="mapaClima">
 
                                         </div>

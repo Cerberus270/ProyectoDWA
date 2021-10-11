@@ -129,7 +129,7 @@ class CalidadAire {
 
                         }
                         UI.limpiarChildrens(UI.mapaAire);
-                        UI.alert('La ciudad Ingresada no cuenta con un Índice AQI valido', 'danger')
+                        UI.alert('La ciudad Ingresada no cuenta con un Índice AQI valido', 'danger',UI.mensajeAire);
                         return;
                     }
                 } else {
@@ -142,7 +142,7 @@ class CalidadAire {
 
                     }
                     UI.limpiarChildrens(UI.mapaAire);
-                    UI.alert('Ingreso una ciudad no valida', 'danger')
+                    UI.alert('Ingreso una ciudad no valida', 'danger', UI.mensajeAire);
                     return;
                 }
             })

@@ -8,12 +8,14 @@ export const formularioAire = document.querySelector('#formularioAire'),
 export const mapaClima = document.querySelector('#mapaClima'),
        cmbPaises = document.querySelector('#cmbPaises'),
        txtCiudadClima = document.querySelector('#txtCiudadClima'),
-       formularioClima = document.querySelector('#formularioClima');
+       formularioClima = document.querySelector('#formularioClima'),
+       mensajeclima = document.querySelector('#mensajeClima'),
+       resultadoClima = document.querySelector('#resultadoClima');
 
-export function alert(message, type) {
+export function alert(message, type, parent) {
     var alerta = document.createElement('div')
     alerta.innerHTML = '<div class="alert alert-' + type + '" role="alert">' + message + '</div>';
-    mensajeAire.append(alerta);
+    parent.append(alerta);
 }
 
 export function limpiarChildrens(parent) {
