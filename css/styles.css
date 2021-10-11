@@ -51,5 +51,9 @@ main{
     color: #FFFF;
 }
 
+.cardTemperatura{
+    width: auto;
+}
+
 #mapaAire { height: 180px; }
 #mapaClima { height: 180px; }

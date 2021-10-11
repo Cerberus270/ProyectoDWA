@@ -8,6 +8,7 @@
 
     <!--Estilos Locales-->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/weather.css">
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- CSS only -->
@@ -210,7 +211,8 @@
                                     <div class="col-md-8">
                                         <div class="card-body">
                                             <h5 class="card-title">OpenWeatherMap</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">API que nos muestra las condiciones climaticas, 
+                                            <h6 class="card-subtitle mb-2 text-muted">API que nos muestra las
+                                                condiciones climaticas,
                                                 dadas las coordenadas.
                                             </h6>
                                             <p class="card-text">
@@ -253,7 +255,8 @@
                                             <div class="mb-3">
                                                 <label for="txtCiudadClima" class="form-label">Ciudad</label>
                                                 <input type="text" class="form-control" id="txtCiudadClima"
-                                                    aria-describedby="ciudadDesc" required pattern="^[^\s]+(\s+[^\s]+)*$">
+                                                    aria-describedby="ciudadDesc" required
+                                                    pattern="^[^\s]+(\s+[^\s]+)*$">
                                                 <div id="ciudadDesc" class="form-text">
                                                     Ingrese el nombre de una ciudad para visualizar el clima.
                                                 </div>
@@ -262,12 +265,25 @@
                                                 <label for="cmbPaises" class="form-label">Paises</label>
                                                 <select class="form-select" id="cmbPaises" aria-label="">
                                                     <option selected>Seleccione un pais de la lista</option>
-                                                  </select>
+                                                </select>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Visualizar</button>
                                         </form>
                                         <br>
                                         <div id="resultadoClima" class="text-center">
+                                            <div class="weatherCard">
+                                                <div class="currentTemp">
+                                                    <span class="temp">23&deg;</span>
+                                                    <span class="location">Brussels</span>
+                                                </div>
+                                                <div class="currentWeather">
+                                                    <span class="conditions">&#xf00d;</span>
+                                                    <div class="info">
+                                                        <span class="rain">1.3 MM</span>
+                                                        <span class="wind">10 MPH</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div id="mensajeClima">
                                         </div>
