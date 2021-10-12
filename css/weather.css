@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
-#resultadoClima{
+#weatherWrapper{
 	width: 400px;
 	margin: 100px auto;
 }
@@ -21,7 +21,7 @@
 .currentWeather{
 	width: 180px;
 	height: 200px;
-	background: rgb(237, 237, 237);
+	background: rgb(255, 255, 255);
 	margin: 0;
 	position: absolute;
 	top: 0;
@@ -40,8 +40,13 @@
 	text-align: center;
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 30px;
+	font-size: 20px;
 	display: block;
+}
+.description{
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
 }
 .conditions{
 	font-family: weathericons;

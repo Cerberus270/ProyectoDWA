@@ -12,6 +12,15 @@ export const mapaClima = document.querySelector('#mapaClima'),
        mensajeclima = document.querySelector('#mensajeClima'),
        resultadoClima = document.querySelector('#resultadoClima');
 
+//Selectores Electricidad
+export const formularioelectricidad = document.querySelector('#formularioElectricidad'),
+       cmbPaisesElectricidad = document.querySelector('#cmbPaisesElectricidad'),
+       cmbUnidadElectricidad = document.querySelector('#cmbUnidadElectricidad'),
+       txtConsumo = document.querySelector('#txtConsumo'),
+       unidadSeleccionada = document.querySelector('#unidadSeleccionada'),
+       mensajeCarbonEl = document.querySelector('#mensajeCarbonEl'),
+       resultadoCarbonEl = document.querySelector('#resultadoCarbonEl');
+
 export function alert(message, type, parent) {
     var alerta = document.createElement('div')
     alerta.innerHTML = '<div class="alert alert-' + type + '" role="alert">' + message + '</div>';
