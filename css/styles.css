@@ -1,55 +1,98 @@
-main{
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+main {
     margin-top: 5em;
 }
 
-.aqiGood{
-    width:320px;
-    height:175px;
+.aqiGood {
+    width: 320px;
+    height: 175px;
     border-radius: 20px;
     text-align: center;
-    background:#52924c;
-    color: #FFFF;
-}
-.aqiModerate{
-    width:320px;
-    height:175px;
-    border-radius: 20px;
-    text-align: center;
-    background:#fabd2b;
-    color: #FFFF;
-}
-.aqiUnhealthySensitive{
-    width:320px;
-    height:175px;
-    border-radius: 20px;
-    text-align: center;
-    background:#e27939;
-    color: #FFFF;
-}
-.aqiUnhealthy{
-    width:320px;
-    height:175px;
-    border-radius: 20px;
-    text-align: center;
-    background:#c34e5c;
-    color: #FFFF;
-}
-.aqiVeryUnhealthy{
-    width:320px;
-    height:175px;
-    border-radius: 20px;
-    text-align: center;
-    background:#9b57a3;
-    color: #FFFF;
-}
-.aqiHazardous{
-    width:320px;
-    height:175px;
-    border-radius: 20px;
-    text-align: center;
-    background:#87404e;
+    background: #52924c;
     color: #FFFF;
 }
 
-#mapaAire { height: 180px; }
-#mapaClima { height: 180px; }
+.aqiModerate {
+    width: 320px;
+    height: 175px;
+    border-radius: 20px;
+    text-align: center;
+    background: #fabd2b;
+    color: #FFFF;
+}
+
+.aqiUnhealthySensitive {
+    width: 320px;
+    height: 175px;
+    border-radius: 20px;
+    text-align: center;
+    background: #e27939;
+    color: #FFFF;
+}
+
+.aqiUnhealthy {
+    width: 320px;
+    height: 175px;
+    border-radius: 20px;
+    text-align: center;
+    background: #c34e5c;
+    color: #FFFF;
+}
+
+.aqiVeryUnhealthy {
+    width: 320px;
+    height: 175px;
+    border-radius: 20px;
+    text-align: center;
+    background: #9b57a3;
+    color: #FFFF;
+}
+
+.aqiHazardous {
+    width: 320px;
+    height: 175px;
+    border-radius: 20px;
+    text-align: center;
+    background: #87404e;
+    color: #FFFF;
+}
+
+.emisionBaja {
+    border-radius: 20px;
+    width: 320px;
+    height: 175px;
+    color: white;
+    font-family: 'Open Sans';
+    background: rgb(135,204,89);
+    background: linear-gradient(0deg, rgba(135,204,89,1) 25%, rgba(15,164,50,1) 81%);
+}
+.emisionMedia {
+    border-radius: 20px;
+    width: 320px;
+    height: 175px;
+    color: white;
+    font-family: 'Open Sans';
+    background: rgb(34, 70, 195);
+    background: linear-gradient(0deg, rgba(34, 70, 195, 1) 27%, rgba(34, 132, 195, 1) 67%);
+}
+
+.emisionAlta {
+    border-radius: 20px;
+    width: 320px;
+    height: 175px;
+    color: white;
+    font-family: 'Open Sans';
+    background: rgb(195, 34, 34);
+    background: linear-gradient(0deg, rgba(195, 34, 34, 1) 25%, rgba(195, 120, 34, 1) 81%);
+}
+
+
+
+#mapaAire {
+    height: 180px;
+}
+
+#mapaClima {
+    height: 180px;
+}

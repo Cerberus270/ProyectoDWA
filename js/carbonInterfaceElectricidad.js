@@ -18,10 +18,9 @@ class CarbonInterfaceElectricidad {
                 },
                 body: JSON.stringify({
                     type: "electricity",
-                    electricity_unit: "mwh",
-                    electricity_value: 42,
-                    country: "us",
-                    state: "fl"
+                    electricity_unit: this.unidad,
+                    electricity_value: this.valor,
+                    country: this.pais
                 })
             });
             const resultado = await respuesta.json();
@@ -34,6 +33,7 @@ class CarbonInterfaceElectricidad {
                         electricity_unit,
                         electricity_value,
                         estimated_at,
+                        carbon_kg,
                         carbon_mt
                     }
                 }
@@ -41,7 +41,39 @@ class CarbonInterfaceElectricidad {
 
             UI.limpiarChildrens(UI.mensajeCarbonEl);
             UI.limpiarChildrens(UI.resultadoCarbonEl);
-            UI.resultadoCarbonEl.textContent = carbon_mt;
+            const emision = document.createElement('div');
+            if (carbon_kg < 75){
+                emision.classList.add('text-center','mx-auto','emisionBaja','d-flex','align-items-center','justify-content-center');
+                emision.innerHTML = `
+                    <p class="">Su recibo de electricidad genero:
+                        <br>
+                        <strong>${carbon_kg}Kg de CO2</strong>
+                        <br>
+                        <span>Excelente ahorro energetico &#128076;</span>
+                    </p>
+                `;
+            } else if(carbon_kg > 75 && carbon_kg <135) {
+                emision.classList.add('text-center','mx-auto','emisionMedia','d-flex','align-items-center','justify-content-center');
+                emision.innerHTML = `
+                    <p class="">Su recibo de electricidad genero:
+                        <br>
+                        <strong>${carbon_kg}Kg de CO2</strong>
+                        <br>
+                        <span>Falta ahorrar mas electricidad &#128077;<span>
+                    </p>
+                `;
+            } else {
+                emision.classList.add('text-center','mx-auto','emisionAlta','d-flex','align-items-center','justify-content-center');
+                emision.innerHTML = `
+                    <p class="">Su recibo de electricidad genero:
+                        <br>
+                        <strong>${carbon_kg}Kg de CO2</strong>
+                        <br>
+                        <span>Tienes que mejorar tu consumo electrico &#128078;</span>
+                    </p>
+                `;
+            }
+            UI.resultadoCarbonEl.appendChild(emision);
         } catch (error) {
             console.error(error);
         }

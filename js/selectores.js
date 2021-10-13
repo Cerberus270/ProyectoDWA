@@ -21,6 +21,16 @@ export const formularioelectricidad = document.querySelector('#formularioElectri
        mensajeCarbonEl = document.querySelector('#mensajeCarbonEl'),
        resultadoCarbonEl = document.querySelector('#resultadoCarbonEl');
 
+//Selectores Envio
+export const formularioEnvio = document.querySelector('#formularioEnvio'),
+       cmbUnidadEnvio = document.querySelector('#cmbUnidadEnvio'),
+       inputEspeso = document.querySelector('#inputPeso'),
+       cmbUnidadElectricidad = document.querySelector('#cmbUnidadElectricidad'),
+       inputDistancia = document.querySelector('#inputDistancia'),
+       cmbTipoEnvio = document.querySelector('#cmbTipoEnvio'),
+       mensajeCarbonEnvio = document.querySelector('#mensajeCarbonEnvio'),
+       resultadoCarbonEnvio = document.querySelector('#resultadoCarbonEnvio');
+
 export function alert(message, type, parent) {
     var alerta = document.createElement('div')
     alerta.innerHTML = '<div class="alert alert-' + type + '" role="alert">' + message + '</div>';
