@@ -43,7 +43,7 @@ class CarbonInterfaceElectricidad {
             UI.limpiarChildrens(UI.resultadoCarbonEl);
             const emision = document.createElement('div');
             if (carbon_kg < 75){
-                emision.classList.add('text-center','mx-auto','emisionBaja','d-flex','align-items-center','justify-content-center');
+                emision.classList.add('text-center','mx-auto','emisionBaja','d-flex','align-items-center','justify-content-center','animacion');
                 emision.innerHTML = `
                     <p class="">Su recibo de electricidad genero:
                         <br>
@@ -53,7 +53,7 @@ class CarbonInterfaceElectricidad {
                     </p>
                 `;
             } else if(carbon_kg > 75 && carbon_kg <135) {
-                emision.classList.add('text-center','mx-auto','emisionMedia','d-flex','align-items-center','justify-content-center');
+                emision.classList.add('text-center','mx-auto','emisionMedia','d-flex','align-items-center','justify-content-center','animacion');
                 emision.innerHTML = `
                     <p class="">Su recibo de electricidad genero:
                         <br>
@@ -63,7 +63,7 @@ class CarbonInterfaceElectricidad {
                     </p>
                 `;
             } else {
-                emision.classList.add('text-center','mx-auto','emisionAlta','d-flex','align-items-center','justify-content-center');
+                emision.classList.add('text-center','mx-auto','emisionAlta','d-flex','align-items-center','justify-content-center','animacion');
                 emision.innerHTML = `
                     <p class="">Su recibo de electricidad genero:
                         <br>

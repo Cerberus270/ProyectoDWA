@@ -13,6 +13,7 @@ class OpenWeather {
         fetch(url)
             .then(respuesta => respuesta.json())
             .then(resultado => {
+                UI.spinner(UI.resultadoClima);
                 if (resultado.cod === "404") {
                     UI.alert('Error la ciudad ingresada no es valida o no se encuentra en la BD', 'danger', UI.mensajeclima);
                     UI.limpiarChildrens(UI.resultadoClima);
@@ -44,6 +45,12 @@ class OpenWeather {
 
                     } = resultado;
                     console.log(resultado);
+                    var container = L.DomUtil.get('mapaClima');
+                    if (container != null) {
+                        console.log('sdf');
+                        container._leaflet_id = null;
+                    }
+
                     //Hora Fuente => https://stackoverflow.com/questions/62376115/how-to-obtain-open-weather-api-date-time-from-city-being-fetched
                     const d = new Date()
                     const localTime = d.getTime()
@@ -56,7 +63,7 @@ class OpenWeather {
                     UI.limpiarChildrens(UI.mensajeclima);
                     UI.resultadoClima.setAttribute('class', 'mx-auto', 'text-center');
                     const texto = document.createElement('p');
-                    texto.setAttribute('class', 'description');
+                    texto.setAttribute('class', 'description','animacion');
                     texto.innerHTML = `
                     <p class="description">
                         descripción: ${weather[0].description}
@@ -64,7 +71,7 @@ class OpenWeather {
                         hora: ${nd.getHours()}:${nd.getMinutes()}
                     </p>`;
                     const climaCard = document.createElement('div');
-                    climaCard.classList.add('weatherCard', 'text-center', 'mx-auto');
+                    climaCard.classList.add('weatherCard', 'text-center', 'mx-auto','animacion');
                     climaCard.innerHTML = `
                         <div class="currentTemp">
                             <span class="temp">${kelvinToCelcius(temp)}&#176;</span>
@@ -81,6 +88,15 @@ class OpenWeather {
                         </div>`
                     UI.resultadoClima.appendChild(texto);
                     UI.resultadoClima.appendChild(climaCard);
+                    //Mapa Leaflet
+                    var map = L.map('mapaClima').setView([lat, lon], 10);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                    }).addTo(map);
+                    L.marker([lat, lon]).addTo(map)
+                        .bindPopup(`Clima en ${this.ciudad}: ${kelvinToCelcius(temp)}`)
+                        .openPopup();
+                    map.dragging.disable();
                 }
             })
             .catch(error => console.error(error))

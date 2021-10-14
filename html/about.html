@@ -294,18 +294,16 @@
                                                 <label for="cmbUnidadEnvio" class="form-label">
                                                     Unidad de peso a utilizar para calcular el envio
                                                 </label>
-                                                <select class="form-select" id="cmbUnidadEnvio" aria-label=""
-                                                    required>
-                                                    <option selected value="">Seleccione una unidad de la lista</option>
-                                                    <option value="g">gr</option>
+                                                <select class="form-select" id="cmbUnidadEnvio" aria-label="" required>
+                                                    <option value="g" selected>gr</option>
                                                     <option value="lb">lb</option>
-                                                    <option value="lb">Kg</option>
+                                                    <option value="kg">Kg</option>
                                                     <option value="mt">toneladas</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="inputPeso" class="form-label">Peso del paquete en: <strong
-                                                        id="unidadSeleccionada">gr</strong></label>
+                                                        id="unidadSeleccionadaE">gr</strong></label>
                                                 <input type="number" class="form-control" id="inputPeso"
                                                     aria-describedby="descElectricidad" required min="1">
                                                 <div id="descElectricidad" class="form-text">
@@ -313,28 +311,34 @@
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="cmbUnidadElectricidad" class="form-label">Unidad de Distancia: </label>
-                                                <select name="" id="cmbUnidadElectricidad" class="form-select">
-                                                    <option selected value="mwh">Megavatios-hora (MW⋅h)</option>
-                                                    <option value="kwh">Kilovatio-hora (KW⋅h)</option>
+                                                <label for="cmbUnidadDistancia" class="form-label">Unidad de Distancia:
+                                                </label>
+                                                <select name="" id="cmbUnidadDistancia" class="form-select"
+                                                    name="unidadDistancia">
+                                                    <option selected value="mi">millas</option>
+                                                    <option value="km">kilometros</option>
                                                 </select>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="inputDistancia" class="form-label">Distancia recorrida por el paquete</label>
-                                                <input type="number" class="form-control" id="inputDisctancia"
-                                                aria-describedby="descElectricidad" required min="1">
+                                                <label for="inputDistancia" class="form-label">Distancia recorrida por
+                                                    el paquete</label>
+                                                <input type="number" class="form-control" id="inputDistancia"
+                                                    aria-describedby="descElectricidad" required min="1">
                                                 <div id="descElectricidad" class="form-text">
-                                                    Si quieres obtener la distancia Exacta, revisa <a href="https://www.distance.to/" target="_blank" 
-                                                    rel="noopener noreferrer">distance.to</a> e ingresa el valor en la unidad de medida seleccionada.
+                                                    Si quieres obtener la distancia Exacta, revisa <a
+                                                        href="https://www.distance.to/" target="_blank"
+                                                        rel="noopener noreferrer">distance.to</a> e ingresa el valor en
+                                                    la unidad de medida seleccionada.
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                <label for="cmbTipoEnvio" class="form-label">Medio de transporte del paquete: </label>
+                                                <label for="cmbTipoEnvio" class="form-label">Medio de transporte del
+                                                    paquete: </label>
                                                 <select name="" id="cmbTipoEnvio" class="form-select">
-                                                    <option selected value="ship">Barco</option>
+                                                    <option value="ship" selected>Barco</option>
                                                     <option value="train">Tren</option>
                                                     <option value="truck">Camion</option>
-                                                    <option value="Avion">Avion</option>
+                                                    <option value="plane">Avion</option>
                                                 </select>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Visualizar</button>

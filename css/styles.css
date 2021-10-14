@@ -64,9 +64,10 @@ main {
     height: 175px;
     color: white;
     font-family: 'Open Sans';
-    background: rgb(135,204,89);
-    background: linear-gradient(0deg, rgba(135,204,89,1) 25%, rgba(15,164,50,1) 81%);
+    background: rgb(135, 204, 89);
+    background: linear-gradient(0deg, rgba(135, 204, 89, 1) 25%, rgba(15, 164, 50, 1) 81%);
 }
+
 .emisionMedia {
     border-radius: 20px;
     width: 320px;
@@ -95,4 +96,25 @@ main {
 
 #mapaClima {
     height: 180px;
+}
+
+.leaflet-fade-anim .leaflet-tile,
+.leaflet-zoom-anim .leaflet-zoom-animated {
+    will-change: auto !important;
+}
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
+}
+
+/* animate new box */
+.animacion {
+	animation: append-animate .3s linear;
 }

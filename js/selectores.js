@@ -4,6 +4,8 @@ export const formularioAire = document.querySelector('#formularioAire'),
     resultadoCalidadAire = document.querySelector('#resultadoCalidadAire'),
     mapaAire = document.querySelector('#mapaAire');
 
+export const prueba = document.querySelector('#prueba');
+
 //Selectores Clima
 export const mapaClima = document.querySelector('#mapaClima'),
        cmbPaises = document.querySelector('#cmbPaises'),
@@ -24,9 +26,10 @@ export const formularioelectricidad = document.querySelector('#formularioElectri
 //Selectores Envio
 export const formularioEnvio = document.querySelector('#formularioEnvio'),
        cmbUnidadEnvio = document.querySelector('#cmbUnidadEnvio'),
-       inputEspeso = document.querySelector('#inputPeso'),
-       cmbUnidadElectricidad = document.querySelector('#cmbUnidadElectricidad'),
+       inputPeso = document.querySelector('#inputPeso'),
+       cmbUnidadDistancia = document.querySelector('#cmbUnidadDistancia'),
        inputDistancia = document.querySelector('#inputDistancia'),
+       unidadSeleccionadaE = document.querySelector('#unidadSeleccionadaE'),
        cmbTipoEnvio = document.querySelector('#cmbTipoEnvio'),
        mensajeCarbonEnvio = document.querySelector('#mensajeCarbonEnvio'),
        resultadoCarbonEnvio = document.querySelector('#resultadoCarbonEnvio');
@@ -72,4 +75,18 @@ export function llenarPaises(parent) {
     }).catch(err => {
         console.log(err);
     })
+}
+
+export function emojiEnvio(tipo){
+    let emoji ="";
+    if(tipo === "ship"){
+        emoji = "&#x1F6A2;"
+    } else if(tipo === "train") {
+        emoji = "&#x1F682;";
+    } else if(tipo === "truck") {
+        emoji = "&#x1F69A;";
+    } else if(tipo === "plane") {
+        emoji = "&#9992;&#65039;";
+    }
+    return emoji;
 }

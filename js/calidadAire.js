@@ -31,7 +31,8 @@ class CalidadAire {
 
                     }
                     if (aqi > 0 && aqi <= 50) {
-                        UI.resultadoCalidadAire.classList.add('aqiGood', 'mx-auto', 'text-center');
+                        const divPrueba = document.createElement('div');
+                        UI.resultadoCalidadAire.classList.add('aqiGood', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">GREEN<br>Rango: 0-50<br>AQI: ${aqi}<br><small>La Calidad de Aire es BUENA</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
@@ -46,7 +47,7 @@ class CalidadAire {
                             .openPopup();
                         map.dragging.disable();
                     } else if (aqi >= 51 && aqi <= 100) {
-                        UI.resultadoCalidadAire.classList.add('aqiModerate', 'mx-auto', 'text-center');
+                        UI.resultadoCalidadAire.classList.add('aqiModerate', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">YELLOW<br>Rango: 51-100<br>AQI: ${aqi}<br><small>La Calidad de Aire es MODERADA</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
@@ -61,7 +62,7 @@ class CalidadAire {
                             .openPopup();
                         map.dragging.disable();
                     } else if (aqi >= 101 && aqi <= 150) {
-                        UI.resultadoCalidadAire.classList.add('aqiUnhealthySensitive', 'mx-auto', 'text-center');
+                        UI.resultadoCalidadAire.classList.add('aqiUnhealthySensitive', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">ORANGE<br>Rango: 101-150<br>AQI: ${aqi}<br><small>La Calidad de Aire es POCO SALUDABLE PARA SENSIBLES</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
@@ -76,7 +77,7 @@ class CalidadAire {
                             .openPopup();
                         map.dragging.disable();
                     } else if (aqi >= 151 && aqi <= 200) {
-                        UI.resultadoCalidadAire.classList.add('aqiUnhealthy', 'mx-auto', 'text-center');
+                        UI.resultadoCalidadAire.classList.add('aqiUnhealthy', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">RED<br>Rango: 151-200<br>AQI: ${aqi}<br><small>La Calidad de Aire es POCO SALUDABLE</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
@@ -90,7 +91,7 @@ class CalidadAire {
                             .bindPopup('POCO SALUDABLE')
                             .openPopup();
                     } else if (aqi >= 151 && aqi <= 200) {
-                        UI.resultadoCalidadAire.classList.add('aqiVeryUnhealthy', 'mx-auto', 'text-center');
+                        UI.resultadoCalidadAire.classList.add('aqiVeryUnhealthy', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">PURPLE<br>Rango: 201-300<br>AQI: ${aqi}<br><small>La Calidad de Aire es MUY POCO SALUDABLE</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
@@ -105,7 +106,7 @@ class CalidadAire {
                             .openPopup();
                         map.dragging.disable();
                     } else if (aqi >= 301 && aqi <= 500) {
-                        UI.resultadoCalidadAire.classList.add('aqiHazardous', 'mx-auto', 'text-center');
+                        UI.resultadoCalidadAire.classList.add('aqiHazardous', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">MAROON<br>Rango: 301-500<br>AQI: ${aqi}<br><small>La Calidad de Aire es PELIGROSA</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
