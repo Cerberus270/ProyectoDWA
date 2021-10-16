@@ -4,7 +4,12 @@ export const formularioAire = document.querySelector('#formularioAire'),
     resultadoCalidadAire = document.querySelector('#resultadoCalidadAire'),
     mapaAire = document.querySelector('#mapaAire');
 
-export const prueba = document.querySelector('#prueba');
+//export const prueba = document.querySelector('#prueba');
+
+export const modalAQI = document.getElementById('modalAQI'),
+       modalCarbonEl = document.getElementById('modalCarbonEl'),
+       modalCarbonEnvio = document.getElementById('modalCarbonEnvio'),
+       modalWeather = document.getElementById('modalWeather')
 
 //Selectores Clima
 export const mapaClima = document.querySelector('#mapaClima'),
@@ -36,7 +41,7 @@ export const formularioEnvio = document.querySelector('#formularioEnvio'),
 
 export function alert(message, type, parent) {
     var alerta = document.createElement('div')
-    alerta.innerHTML = '<div class="alert alert-' + type + '" role="alert">' + message + '</div>';
+    alerta.innerHTML = '<div class="alert alert-' + type + ' animacion" role="alert">' + message + '</div>';
     parent.append(alerta);
 }
 

@@ -15,8 +15,14 @@ class OpenWeather {
             .then(resultado => {
                 UI.spinner(UI.resultadoClima);
                 if (resultado.cod === "404") {
-                    UI.alert('Error la ciudad ingresada no es valida o no se encuentra en la BD', 'danger', UI.mensajeclima);
+                    UI.limpiarChildrens(UI.mensajeclima);
                     UI.limpiarChildrens(UI.resultadoClima);
+                    UI.alert('Error la ciudad ingresada no es valida o no se encuentra en la BD', 'danger', UI.mensajeclima);
+                    var container = L.DomUtil.get('mapaClima');
+                    if (container != null) {
+                        container._leaflet_id = null;
+                    }
+                    UI.limpiarChildrens(UI.mapaClima);
                     return;
                 } else {
                     const kelvinToCelcius = grados => parseInt(grados - 273.15);
@@ -47,7 +53,6 @@ class OpenWeather {
                     console.log(resultado);
                     var container = L.DomUtil.get('mapaClima');
                     if (container != null) {
-                        console.log('sdf');
                         container._leaflet_id = null;
                     }
 

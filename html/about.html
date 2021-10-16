@@ -48,13 +48,13 @@
                 <div class="navbar-collapse collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-md-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link">Otro</a>
@@ -70,7 +70,7 @@
                         <div class="col">
                             <div class="card mb-3">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 d-flex align-items-center">
                                         <img src="../img/aqi-transparent.png" class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-8">
@@ -160,7 +160,7 @@
                         <div class="col">
                             <div class="card mb-3">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 d-flex align-items-center">
                                         <img src="../img/carbon.png" class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-8">
@@ -256,7 +256,7 @@
                                                 <label for="txtConsumo" class="form-label">Consumo Electrico en <strong
                                                         id="unidadSeleccionada">mwh</strong></label>
                                                 <input type="number" class="form-control" id="txtConsumo"
-                                                    aria-describedby="descElectricidad" required min="1">
+                                                    aria-describedby="descElectricidad" required step="any" min="1">
                                                 <div id="descElectricidad" class="form-text">
                                                     Ingrese el consumo de electricidad.
                                                 </div>
@@ -305,7 +305,7 @@
                                                 <label for="inputPeso" class="form-label">Peso del paquete en: <strong
                                                         id="unidadSeleccionadaE">gr</strong></label>
                                                 <input type="number" class="form-control" id="inputPeso"
-                                                    aria-describedby="descElectricidad" required min="1">
+                                                    aria-describedby="descElectricidad" required min="1" step="any">
                                                 <div id="descElectricidad" class="form-text">
                                                     Ingrese el peso del paquete.
                                                 </div>
@@ -323,7 +323,7 @@
                                                 <label for="inputDistancia" class="form-label">Distancia recorrida por
                                                     el paquete</label>
                                                 <input type="number" class="form-control" id="inputDistancia"
-                                                    aria-describedby="descElectricidad" required min="1">
+                                                    aria-describedby="descElectricidad" required min="1" step="any">
                                                 <div id="descElectricidad" class="form-text">
                                                     Si quieres obtener la distancia Exacta, revisa <a
                                                         href="https://www.distance.to/" target="_blank"
@@ -362,7 +362,7 @@
                         <div class="col">
                             <div class="card mb-3">
                                 <div class="row g-0">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 d-flex align-items-center">
                                         <img src="../img/openWeatherMap.png" class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-8">

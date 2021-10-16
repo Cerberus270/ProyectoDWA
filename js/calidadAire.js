@@ -12,6 +12,7 @@ class CalidadAire {
             .then(resultado => {
                 if (resultado.status === 'ok') {
                     console.log(resultado);
+                    //Destructuring
                     const {
                         data: {
                             aqi,
@@ -31,7 +32,6 @@ class CalidadAire {
 
                     }
                     if (aqi > 0 && aqi <= 50) {
-                        const divPrueba = document.createElement('div');
                         UI.resultadoCalidadAire.classList.add('aqiGood', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">GREEN<br>Rango: 0-50<br>AQI: ${aqi}<br><small>La Calidad de Aire es BUENA</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
