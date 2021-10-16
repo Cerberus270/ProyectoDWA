@@ -73,7 +73,7 @@
                             <a class="nav-link" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="html/about.html">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page">Contact</a>
@@ -107,8 +107,8 @@
 
                             <div class="col-sm-4">
                                 <label for="edad" class="form-label">Edad</label>
-                                <input type="number" class="form-control" id="edad" name="edad" required maxlength="100"
-                                    minlength="18" value="18">
+                                <input type="number" class="form-control" id="edad" name="edad" required max="100"
+                                    min="18" value="18">
                                 <!-- <div class="invalid-feedback">
                                 </div> -->
                             </div>
@@ -124,7 +124,7 @@
 
                             <div class="col-sm-4">
                                 <label for="telefono" class="form-label">Telefono</label>
-                                <input type="telefono" class="form-control" id="telefono" required maxlength="8"
+                                <input type="telefono" class="form-control" id="telefono" name="telefono" required maxlength="8"
                                     minlength="8" pattern="[0-9]*">
                                 <!-- <div class="invalid-feedback">
                                 </div> -->
@@ -132,7 +132,7 @@
 
                             <div class="col-sm-12">
                                 <label for="tMensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" aria-label="tMensaje" name="tMessage"></textarea>
+                                <textarea class="form-control" aria-label="tMessage" name="tMessage"></textarea>
                                 <!-- <div class="invalid-feedback">
                                 </div> -->
                             </div>
@@ -148,6 +148,7 @@
         </div>
     </main>
     <script src="../js/correo.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

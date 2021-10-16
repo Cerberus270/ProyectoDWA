@@ -99,7 +99,8 @@ class OpenWeather {
                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                     }).addTo(map);
                     L.marker([lat, lon]).addTo(map)
-                        .bindPopup(`Clima en ${this.ciudad}: ${kelvinToCelcius(temp)}`)
+                        .bindPopup(`Clima en ${this.ciudad}: ${kelvinToCelcius(temp)}	
+                        &#8451;`)
                         .openPopup();
                     map.dragging.disable();
                 }
