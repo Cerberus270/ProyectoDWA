@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
@@ -103,7 +104,7 @@
             </div>
         </section>
         <section>
-            <div class="container-fluid text-center">
+            <div class="container text-center">
                 <figure>
                     <blockquote class="blockquote">
                         <p>En conjunto, el rango de evidencia publicada indica que los costos netos de los daños del
@@ -118,10 +119,10 @@
         <section>
             <div class="container">
                 <div class="container">
-                    <hr class="featurette-divider">
+                    <hr class="divisor">
                     <div class="row">
                         <div class="col-md-7">
-                            <h2 class="featurette-heading">La Huella Humana en los gases de efecto invernadero</h2>
+                            <h2 class="cambio-heading">La Huella Humana en los gases de efecto invernadero</h2>
                             <p class="lead">Los gases de efecto invernadero (GEI) se producen de manera natural y son
                                 esenciales para la supervivencia de los seres humanos y de millones de otros seres vivos
                                 ya que, al impedir que parte del calor del sol se propague hacia el espacio, hacen la
@@ -130,24 +131,53 @@
                                 atmósfera se han incrementado en niveles nunca antes vistos en tres millones de años.
                             </p>
                         </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 align-center d-flex">
+                            <img src="img/efecto-invernadero-interior-sostenible.jpg" class="img-fluid hover"
+                                alt="Gases de Efecto Invernadero" data-bs-toggle="modal" data-bs-target="#modalGases">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalGases" tabindex="-1" aria-labelledby="labelGases"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelGases">Gases de Efecto Invernadero</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/efecto-invernadero-interior-sostenible.jpg" class="img-fluid"
+                                        alt="Gases contaminantes">
+                                    <p>
+                                        Un gas de efecto invernadero (GEI) es un gas atmosférico que absorbe y emite
+                                        radiación dentro del rango infrarrojo. Este proceso es la fundamental causa del
+                                        efecto invernadero.​ Los principales GEI en la atmósfera terrestre son el vapor
+                                        de agua (H2O), el dióxido de carbono (CO2), el metano (CH4), el óxido nitroso
+                                        (N2O) y el ozono (O3). Sin los gases de efecto invernadero la temperatura
+                                        promedio de la superficie terrestre sería de −18 °C.
+                                        <br>
+                                        <br>
+                                        La actividad humana desde el inicio de la Revolución Industrial (considerado en
+                                        1750) ha producido un incremento del 45 % en la concentración atmosférica del
+                                        dióxido de carbono, de fórmula CO2, desde 280 ppm en 1750 a 400 ppm en 2015.
+                                        Este incremento ha ocurrido a pesar de la absorción de una gran porción de las
+                                        emisiones por varios depósitos naturales que participan del ciclo del
+                                        carbono.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="featurette-divider">
+                    <hr class="divisor">
 
                     <div class="row">
                         <div class="col-md-7 order-md-2">
-                            <h2 class="featurette-heading">Bases físicas del cambio climático</h2>
+                            <h2 class="cambio-heading">Bases físicas del cambio climático</h2>
                             <p class="lead">En su último informe científico, el <a href="https://www.ipcc.ch/"
                                     target="_blank" rel="noopener noreferrer">IPCC</a> concluye que se están produciendo
                                 cambios en el clima de la Tierra en todas las regiones y en el sistema climático en su
@@ -157,24 +187,60 @@
                                 climático a nivel mundial.
                             </p>
                         </div>
-                        <div class="col-md-5 order-md-1">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 order-md-1 d-flex align-center">
+                            <img src="img/Greenhouse_Effect_rev_es.svg" class="img-fluid hover"
+                                alt="Efectos del calentamiento Global" data-bs-toggle="modal"
+                                data-bs-target="#modalEfecto">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalEfecto" tabindex="-1" aria-labelledby="labelEfecto"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelEfecto">Efecto Invernadero</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/Greenhouse_Effect_rev_es.svg" class="img-fluid"
+                                        alt="Gases contaminantes">
+                                    <p>
+                                        El efecto invernadero es un proceso en el que la radiación térmica emitida por
+                                        la superficie planetaria es absorbida por los gases de efecto invernadero (GEI)
+                                        atmosféricos y es irradiada en todas las direcciones. Como parte de esta
+                                        radiación es devuelta hacia la superficie terrestre y la atmósfera inferior,
+                                        ello resulta en un incremento de la temperatura superficial media respecto a lo
+                                        que habría en ausencia de los GEI.
+                                        <br>
+                                        <br>
+                                        Una parte de la radiación solar que llega a la Tierra atraviesa la atmósfera, es
+                                        reflejada y vuelve al espacio; otra llega al suelo y lo calienta. Este emite
+                                        calor (radiación infrarroja) y calienta la atmósfera, ya que el calor es
+                                        retenido por los gases de efecto invernadero.
+                                        <br>
+                                        <br>
+                                        La radiación solar en frecuencias de la luz visible pasa en su mayor parte a
+                                        través de la atmósfera para calentar la superficie planetaria, emitiendo
+                                        posteriormente esta energía en frecuencias menores de radiación térmica
+                                        infrarroja. Esta última es absorbida por los GEI, los que a su vez irradian
+                                        mucha de esta energía a la superficie y atmósfera inferior.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="featurette-divider">
+
+                    <hr class="divisor">
 
                     <div class="row">
                         <div class="col-md-7">
-                            <h2 class="featurette-heading">Calentamiento global de 1.5&#8451;</h2>
+                            <h2 class="cambio-heading">Calentamiento global de 1.5&#8451;</h2>
                             <p class="lead">En 2018 el IPCC publicó un informe especial sobre los impactos del
                                 calentamiento global a 1,5°C.
                                 Este informe también indica que limitar el calentamiento global a 1,5°C requeriría
@@ -184,26 +250,62 @@
                                 seguir disminuyendo hasta alcanzar el "cero neto" aproximadamente en 2050.
                             </p>
                         </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 d-flex align-center">
+                            <img src="img/1080x1080_layers_753905.jpg" class="img-fluid hover" alt="Infografia &#8451;"
+                                data-bs-toggle="modal" data-bs-target="#modalLimite">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalLimite" tabindex="-1" aria-labelledby="label15" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="label15">Limite de temperatura de 1.5&#8451;</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/1080x1080_layers_753905.jpg" class="img-fluid"
+                                        alt="Gases contaminantes">
+                                    <p>
+                                        El Informe Especial sobre Calentamiento Global de 1,5°C (SR15) fue
+                                        publicado por el Grupo intergubernamental sobre cambio climático (IPCC por sus
+                                        siglas en inglés) el 8 de octubre de 2018 El informe, aprobado en Incheon,
+                                        Corea del Sur, incluye más de 6,000 referencias científicas y estuvo preparado
+                                        por 91 autores de 40 países.
+                                        <br>
+                                        <br>
+                                        En diciembre de 2015, la Conferencia 2015 sobre
+                                        cambio climático de Naciones Unidas pidió el informe. El informe fue entregado
+                                        en las Naciones Unidas, durante la 48ª sesión del IPCC para "entregar la guía
+                                        oficial, científica para gobiernos" para tratar el cambio climático
+                                        <br>
+                                        <br>
+                                        Su hallazgo clave es que alcanzar sólo un 1.5 °C de aumento es un objetivo
+                                        posible que requiere "reducciones de emisiones ambiciosas" y "cambios rápidos,
+                                        profundos y sin precedentes en todos los aspectos de la sociedad."​ Además, el
+                                        informe encuentra que "limitar el calentamiento global a 1.5 °C comparado con 2
+                                        °C reduciría impactos desafiantes en ecosistemas, salud humana y bienestar" y
+                                        que un 2 °C de aumento de temperatura exacerbaría fenómenos hidrometeorológicos,
+                                        aumentaría niveles de mar y disminuiría el hielo del mar Ártico, blanquearía el
+                                        coral y produciría la pérdida de ecosistemas, entre otros impactos.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="featurette-divider">
+
+                    <hr class="divisor">
 
                     <h1 class="display-4 text-center">Instrumentos Para Contrarrestar El Efecto</h1>
-                    <hr class="featurette-divider">
+                    <hr class="divisor">
                     <div class="row">
                         <div class="col-md-7">
-                            <h2 class="featurette-heading">Convención Marco de las Naciones Unidas sobre el Cambio
+                            <h2 class="cambio-heading">Convención Marco de las Naciones Unidas sobre el Cambio
                                 Climático</h2>
                             <p class="lead">El sistema de las Naciones Unidas está a la vanguardia de los esfuerzos para
                                 salvar nuestro planeta. En 1992 la Cumbre para la Tierra dio lugar a la <a
@@ -215,24 +317,94 @@
                                 cuyo objetivo final es prevenir una interferencia humana "peligrosa" en el sistema
                                 climático.</p>
                         </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 d-flex align-center">
+                            <img src="img/512x512bb.jpg" class="img-fluid hover" alt="UNFCCC" data-bs-toggle="modal"
+                                data-bs-target="#modalCmnu">
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modalCmnu" tabindex="-1" aria-labelledby="labelCmnu" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelCmnu">CMNUCC</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mx-auto text-center">
+                                        <img src="img/b2ap3_large_formato-blog.jpg" class="img-fluid"
+                                            alt="Gases contaminantes">
+                                    </div>
+                                    <p>
+                                        La Convención Marco de las Naciones Unidas sobre el Cambio Climático entró en
+                                        vigor el 21 de marzo de 1994. Hoy en día, tiene una membresía casi universal.
+                                        Los 197 países que han ratificado la Convención se denominan Partes en la
+                                        Convención.
+                                        <br>
+                                        <br>
+                                        La CMNUCC es una "Convención de Río", una de las dos abiertas a la firma en la
+                                        "Cumbre de la Tierra de Río" en 1992. Las otras dos convenciones que salieron de
+                                        Río son el Convenio de las Naciones Unidas sobre la Diversidad Biológica y la
+                                        Convención de Lucha contra la Desertificación. Los tres están intrínsecamente
+                                        vinculados. En este contexto se creó el Grupo de Enlace Mixto para impulsar la
+                                        cooperación entre las tres Convenciones, con el objetivo último de desarrollar
+                                        sinergias en sus actividades sobre cuestiones de interés mutuo. Ahora también
+                                        incorpora la Convención de Ramsar sobre los Humedales.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <hr class="featurette-divider">
+                    <div class="modal fade" id="modalEfecto" tabindex="-1" aria-labelledby="labelEfecto"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelEfecto">Efecto Invernadero</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/Greenhouse_Effect_rev_es.svg" class="img-fluid"
+                                        alt="Gases contaminantes">
+                                    <p>
+                                        El efecto invernadero es un proceso en el que la radiación térmica emitida por
+                                        la superficie planetaria es absorbida por los gases de efecto invernadero (GEI)
+                                        atmosféricos y es irradiada en todas las direcciones. Como parte de esta
+                                        radiación es devuelta hacia la superficie terrestre y la atmósfera inferior,
+                                        ello resulta en un incremento de la temperatura superficial media respecto a lo
+                                        que habría en ausencia de los GEI.
+
+                                        Una parte de la radiación solar que llega a la Tierra atraviesa la atmósfera, es
+                                        reflejada y vuelve al espacio; otra llega al suelo y lo calienta. Este emite
+                                        calor (radiación infrarroja) y calienta la atmósfera, ya que el calor es
+                                        retenido por los gases de efecto invernadero.
+
+                                        La radiación solar en frecuencias de la luz visible pasa en su mayor parte a
+                                        través de la atmósfera para calentar la superficie planetaria, emitiendo
+                                        posteriormente esta energía en frecuencias menores de radiación térmica
+                                        infrarroja. Esta última es absorbida por los GEI, los que a su vez irradian
+                                        mucha de esta energía a la superficie y atmósfera inferior.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="divisor">
 
                     <div class="row">
                         <div class="col-md-7 order-md-2">
-                            <h2 class="featurette-heading">Protocolo de Kyoto</h2>
+                            <h2 class="cambio-heading">Protocolo de Kyoto</h2>
                             <p class="lead">En 1995 la comunidad internacional inició negociaciones para fortalecer la
                                 respuesta mundial al cambio climático. Dos años después, en 1997, 83 países firmaron y
                                 46 ratificaron el <a href="https://unfccc.int/es/kyoto_protocol" target="_blank"
@@ -243,24 +415,61 @@
                                 Kyoto.
                             </p>
                         </div>
-                        <div class="col-md-5 order-md-1">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 order-md-1 d-flex align-center">
+                            <img src="img/protocolo-de-kyoto.webp" class="img-fluid hover" alt="Protocolo de Kyoto"
+                                data-bs-toggle="modal" data-bs-target="#modalKyoto">
                         </div>
                     </div>
 
-                    <hr class="featurette-divider">
+                    <div class="modal fade" id="modalKyoto" tabindex="-1" aria-labelledby="labelKyoto"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelKyoto">Protocolo de Kyoto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/1 Av7_4Ne0HZshu79I-TGR5Q.jpeg" class="img-fluid"
+                                        alt="Gases contaminantes">
+                                    <p>
+                                        El Protocolo de Kyoto fue aprobado el 11 de diciembre de 1997. Debido a un
+                                        complejo proceso de ratificación, entró en vigor el 16 de febrero de 2005.
+                                        Actualmente, hay 192 Partes en el Protocolo de Kyoto.
+                                        <br>
+                                        <br>
+                                        En concreto, el Protocolo de Kyoto pone en funcionamiento la Convención Marco de
+                                        las Naciones Unidas sobre el Cambio Climático comprometiendo a los países
+                                        industrializados a limitar y reducir las emisiones de gases de efecto
+                                        invernadero (GEI) de conformidad con las metas individuales acordadas. La propia
+                                        Convención sólo pide a esos países que adopten políticas y medidas de mitigación
+                                        y que informen periódicamente.
+                                        <br>
+                                        <br>
+                                        El Protocolo de Kyoto se basa en los principios y disposiciones de la Convención
+                                        y sigue su estructura basada en los anexos. Sólo vincula a los países
+                                        desarrollados y les impone una carga más pesada en virtud del principio de
+                                        "responsabilidad común pero diferenciada y capacidades respectivas", porque
+                                        reconoce que son los principales responsables de los actuales altos niveles de
+                                        emisiones de GEI en la atmósfera.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <hr class="divisor">
 
                     <div class="row">
                         <div class="col-md-7">
-                            <h2 class="featurette-heading">Acuerdo de París</h2>
+                            <h2 class="cambio-heading">Acuerdo de París</h2>
                             <p class="lead">El principal objetivo del <a
                                     href="https://unfccc.int/es/process-and-meetings/the-paris-agreement/que-es-el-acuerdo-de-paris"
                                     target="_blank" rel="noopener noreferrer">Acuerdo de París</a> es reforzar la
@@ -273,25 +482,68 @@
                                 internacional en la historia que más países han firmado en un solo día.
                             </p>
                         </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 d-flex align-center">
+                            <img src="img/s960_climateconference.jpg" class="img-fluid" alt="Acuerdo de Paris 2015"
+                                data-bs-toggle="modal" data-bs-target="#modalParis">
                         </div>
                     </div>
+                    <div class="modal fade" id="modalParis" tabindex="-1" aria-labelledby="labelParis"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="labelParis">Acuerdo de Paris</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="img/The-paris-agreement-large.jpg" class="img-fluid"
+                                        alt="Gases contaminantes">
+                                    <p>
+                                        El 12 diciembre de 2015, en la COP21 de París, las Partes de la CMNUCC
+                                        alcanzaron un acuerdo histórico para combatir el cambio climático y acelerar e
+                                        intensificar las acciones e inversiones necesarias para un futuro sostenible con
+                                        bajas emisiones de carbono. El Acuerdo de París se basa en la Convención y, por
+                                        primera vez, hace que todos los países tengan una causa común para emprender
+                                        esfuerzos ambiciosos para combatir el cambio climático y adaptarse a sus
+                                        efectos, con un mayor apoyo para ayudar a los países en desarrollo a hacerlo.
+                                        Como tal, traza un nuevo rumbo en el esfuerzo climático mundial.
+                                        <br><br>
+                                        El objetivo central del Acuerdo de París es reforzar la respuesta mundial a la
+                                        amenaza del cambio climático manteniendo el aumento de la temperatura mundial en
+                                        este siglo muy por debajo de los 2 grados centígrados por encima de los niveles
+                                        preindustriales, y proseguir los esfuerzos para limitar aún más el aumento de la
+                                        temperatura a 1,5 grados centígrados. Además, el acuerdo tiene por objeto
+                                        aumentar la capacidad de los países para hacer frente a los efectos del cambio
+                                        climático y lograr que las corrientes de financiación sean coherentes con un
+                                        nivel bajo de emisiones de gases de efecto invernadero (GEI) y una trayectoria
+                                        resistente al clima. 
+                                        <br><br>
+                                        Para alcanzar estos ambiciosos objetivos, es preciso
+                                        establecer un marco tecnológico nuevo y mejorar el fomento de la capacidad, con
+                                        el fin de apoyar las medidas que adopten los países en desarrollo y los países
+                                        más vulnerables, en consonancia con sus propios objetivos nacionales, y
+                                        movilizar y proporcionar los recursos financieros necesarios. El Acuerdo también
+                                        prevé un marco mejorado de transparencia para la acción y el apoyo.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="feauturette-divider">
+
                     <div class="row">
-                        <div class="col-md-7">
-                            <h2 class="featurette-heading">Cumbre sobre la Acción Climática 2019</h2>
+                        <div class="col-md-7 order-md-2">
+                            <h2 class="cambio-heading">Cumbre sobre la Acción Climática 2019</h2>
                             <p class="lead">El 23 de septiembre de 2019, el Secretario General António Guterres convocó
                                 a los Estados Miembros a participar en la <a
                                     href="https://www.un.org/es/climatechange/2019-climate-action-summit"
-                                    target="_blank" rel="noopener noreferrer">Cumbre sobre la Acción Climática</a>  Un
+                                    target="_blank" rel="noopener noreferrer">Cumbre sobre la Acción Climática</a> Un
                                 importante
                                 evento que reunió a líderes mundiales, del sector privado y la sociedad civil con la
                                 finalidad de respaldar, incrementar y acelerar el proceso multilateral en la acción
@@ -300,27 +552,21 @@
                                 camino por recorrer. Se necesita mucho más para neutralizar las emisiones de carbono
                                 para 2050 y limitar el calentamiento global a 1,5 ºC para finales de siglo.</p>
                         </div>
-                        <div class="col-md-5">
-                            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                                width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img"
-                                aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                                <title>Placeholder</title>
-                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-                                    dy=".3em">500x500</text>
-                            </svg>
-
+                        <div class="col-md-5 order-md-1 d-flex align-center">
+                            <img src="img/climate-summit-2019-630px.png" class="img-fluid"
+                                alt="Cumbre sobre cambio climatico 2019">
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
     </main>
     <br>
     <footer class="container">
-        <p class="float-end"><a href="#">Back to top</a></p>
-        <p>&copy; 2021 030519-044019-034519. &middot;</p>
-      </footer>
+        <p class="float-end"><a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a></p>
+        <p>&copy; 2021 Katherine Castillo - Roberto Marquez - Geovanny Martinez. &middot;</p>
+    </footer>
 </body>
 
 </html>

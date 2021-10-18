@@ -92,31 +92,25 @@ main {
     background: linear-gradient(0deg, rgba(195, 34, 34, 1) 25%, rgba(195, 120, 34, 1) 81%);
 }
 
-/*Climate Change Content*/
-.marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.marketing h2 {
-    font-weight: 400;
+.divisor {
+    margin: 2rem 0;
 }
 
 /* RESPONSIVE CSS
 Bootstrap documentation, explanation:
 when the size of screen is above 62em
-the font size will be reduced at 50px
+the font size will be reduced at 40px
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
-    .featurette-heading {
-        font-size: 50px;
+    .cambio-heading {
+        font-size: 40px;
     }
 }
 
 @media (min-width: 62em) {
-    .featurette-heading {
-        margin-top: 7rem;
+    .cambio-heading {
+        margin-top: 3rem;
     }
 }
 
@@ -147,6 +141,16 @@ the font size will be reduced at 50px
         opacity: 1;
     }
 }
+
 .animacion {
     animation: append-animate .3s linear;
 }
+
+/*Hover on Images*/
+.hover {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+.hover:hover {opacity: 0.7;}
