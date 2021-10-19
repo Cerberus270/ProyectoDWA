@@ -63,392 +63,394 @@
                 </div>
             </div>
         </nav>
-        <main>
-            <div class="container">
-                <div class="row">
-                    <article>
-                        <div class="col">
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-4 d-flex align-items-center">
-                                        <img src="../img/aqi-transparent.png" class="img-fluid rounded-start" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">World Air Quality Index REST API</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">API para medir la calidad del
-                                                aire, en
-                                                distintas ciudades</h6>
-                                            <p class="card-text">
-                                                El proyecto del Índice Mundial de la Calidad del Aire es un
-                                                proyecto sin ánimo de lucro iniciado en 2007. Su misión es promover la
-                                                concienciación de los ciudadanos sobre la contaminación atmosférica y
-                                                proporcionar una información unificada y mundial sobre la calidad del
-                                                aire.
-
-                                                El proyecto proporciona información transparente sobre la calidad del
-                                                aire en
-                                                más de 130 países, cubriendo más de 30.000 estaciones en 2.000 ciudades
-                                                importantes.
-                                                <br>
-                                                <br>
-                                                Más información través de estos dos sitios web: <a
-                                                    href="https://aqicn.org" target="_blank"
-                                                    rel="noopener noreferrer">aqicn.org</a>
-                                                y <a href="https://waqi.info" target="_blank"
-                                                    rel="noopener noreferrer">waqi.info</a>.
-                                            </p>
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalAQI">Prueba de la API</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalAQI" tabindex="-1" aria-labelledby="modalCalidadAire"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modalCalidadAire">World Air Quality Index</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>
-                                            En este modal tendras la oportunidad de probar la API
-                                        </p>
-                                        <p>
-                                            El índice de calidad del aire (ICA) es una cifra que proporcionan las
-                                            autoridades de una zona (normalmente urbana) y que refleja las cantidades de
-                                            contaminantes presentes en el aire.​ Cuando la calidad del aire es buena
-                                            (tiene pocos contaminantes), las personas pueden respirarlo indefinidamente
-                                            sin que su salud se vea afectada. Cuando es mala pueden darse irritaciones
-                                            oculares, todo tipo de problemas respiratorios e incluso cardíacos.
-                                        </p>
-                                        <form id="formularioAire">
-                                            <div class="mb-3">
-                                                <label for="txtCiudad" class="form-label">Ciudad</label>
-                                                <input type="text" class="form-control" id="txtCiudad"
-                                                    aria-describedby="ciudadDesc" required>
-                                                <div id="ciudadDesc" class="form-text">
-                                                    Ingrese el nombre de una ciudad para visualizar la calidad del aire.
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Visualizar</button>
-                                        </form>
-                                        <br>
-                                        <div id="mensajeAire">
-                                        </div>
-                                        <div id="resultadoCalidadAire" class="text-center">
-                                        </div>
-                                        <br>
-                                        <div id="mapaAire">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Fin Modal Calidad Aire-->
-                    </article>
-                    <article>
-                        <div class="col">
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-4 d-flex align-items-center">
-                                        <img src="../img/carbon.png" class="img-fluid rounded-start" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Carbon Interface</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">API para medir nuestras emisiones
-                                                de carbono</h6>
-                                            <p class="card-text">
-                                                Usted está aquí porque quiere hacer que su aplicación sea más consciente
-                                                del clima. Nuestro objetivo en Carbon Interface es facilitar a los
-                                                desarrolladores la integración de estimaciones de emisiones de carbono
-                                                con respaldo científico en sus aplicaciones. De este modo, podemos crear
-                                                un software que reduzca las emisiones de carbono, frenando el cambio
-                                                climático.
-                                                &nbsp;
-                                                Carbon Interface ofrece dos APIs:
-                                                <br>
-                                                <br>
-                                                API de estimaciones:
-                                                La API de estimaciones facilita la generación de estimaciones precisas
-                                                de las emisiones de los vuelos, los vehículos, el transporte marítimo,
-                                                el consumo de electricidad y la combustión de combustibles.
-                                                <br>
-                                                <br>
-                                                API de Carbon Ledger:
-                                                La API Carbon Ledger facilita la generación de estimaciones precisas de
-                                                emisiones a partir de transacciones con tarjetas de crédito y débito.
-                                                <br>
-                                                <br>
-                                                Más información través de este sitio web: <a
-                                                    href="https://www.carboninterface.com/" target="_blank"
-                                                    rel="noopener noreferrer">carboninterface.com</a>
-                                            </p>
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalCarbonEl">Prueba de la API Consumo</button>
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalCarbonEnvio">Prueba de Paquetes</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Modal Carbon Electricidad-->
-                        <div class="modal fade" id="modalCarbonEl" tabindex="-1" aria-labelledby="textoModalCarbonEl"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="textoModalCarbonEl">Calculo de emisiones de carbono
-                                            Electricidad</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="#" id="formularioElectricidad">
-                                            <div class="mb-3">
-                                                <label for="cmbPaisesElectricidad" class="form-label">Paises soportados
-                                                    por la API para medir emisiones de carbono
-                                                    en base al consumo electrico
-                                                </label>
-                                                <select class="form-select" id="cmbPaisesElectricidad" aria-label=""
-                                                    required>
-                                                    <option selected value="">Seleccione un pais de la lista</option>
-                                                    <option value="US">United States of America</option>
-                                                    <option value="CA">Canada</option>
-                                                    <option value="AT">Austria</option>
-                                                    <option value="BE">Belgium</option>
-                                                    <option value="BG">Bulgaria</option>
-                                                    <option value="HR">Croatia</option>
-                                                    <option value="CY">Cyprus</option>
-                                                    <option value="CZ">Czechia</option>
-                                                    <option value="DK">Denmark</option>
-                                                    <option value="FI">Finland</option>
-                                                    <option value="FR">France</option>
-                                                    <option value="DE">Germany</option>
-                                                    <option value="IR">Ireland</option>
-                                                    <option value="IT">Italy</option>
-                                                    <option value="NL">Netherlands</option>
-                                                    <option value="ES">Spain</option>
-                                                    <option value="SE">Sweden</option>
-                                                    <option value="GB">United Kingdom</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="cmbUnidadElectricidad" class="form-label">Unidad de Medida
-                                                    de consumo Electrico</label>
-                                                <select name="" id="cmbUnidadElectricidad" class="form-select">
-                                                    <option value="mwh" selected>Megavatios-hora (MW⋅h)</option>
-                                                    <option value="kwh">Kilovatio-hora (KW⋅h)</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="txtConsumo" class="form-label">Consumo Electrico en <strong
-                                                        id="unidadSeleccionada">mwh</strong></label>
-                                                <input type="number" class="form-control" id="txtConsumo"
-                                                    aria-describedby="descElectricidad" required step="any" min="1">
-                                                <div id="descElectricidad" class="form-text">
-                                                    Ingrese el consumo de electricidad.
-                                                </div>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Visualizar</button>
-                                        </form>
-                                        <br>
-                                        <div id="mensajeCarbonEl">
-                                        </div>
-                                        <div id="resultadoCarbonEl" class="text-center">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Fin Modal Carbon Electricidad-->
-                        <!--Modal Carbon Envio-->
-                        <div class="modal fade" id="modalCarbonEnvio" tabindex="-1"
-                            aria-labelledby="textoModalCarbonEnvio" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="textoModalCarbonEnvio">Calculo de emisiones de
-                                            carbono Envio</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="#" id="formularioEnvio">
-                                            <div class="mb-3">
-                                                <label for="cmbUnidadEnvio" class="form-label">
-                                                    Unidad de peso a utilizar para calcular el envio
-                                                </label>
-                                                <select class="form-select" id="cmbUnidadEnvio" aria-label="" required>
-                                                    <option value="g" selected>gr</option>
-                                                    <option value="lb">lb</option>
-                                                    <option value="kg">Kg</option>
-                                                    <option value="mt">toneladas</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="inputPeso" class="form-label">Peso del paquete en: <strong
-                                                        id="unidadSeleccionadaE">gr</strong></label>
-                                                <input type="number" class="form-control" id="inputPeso"
-                                                    aria-describedby="descElectricidad" required min="1" step="any">
-                                                <div id="descElectricidad" class="form-text">
-                                                    Ingrese el peso del paquete.
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="cmbUnidadDistancia" class="form-label">Unidad de Distancia:
-                                                </label>
-                                                <select name="" id="cmbUnidadDistancia" class="form-select"
-                                                    name="unidadDistancia">
-                                                    <option selected value="mi">millas</option>
-                                                    <option value="km">kilometros</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="inputDistancia" class="form-label">Distancia recorrida por
-                                                    el paquete</label>
-                                                <input type="number" class="form-control" id="inputDistancia"
-                                                    aria-describedby="descElectricidad" required min="1" step="any">
-                                                <div id="descElectricidad" class="form-text">
-                                                    Si quieres obtener la distancia Exacta, revisa <a
-                                                        href="https://www.distance.to/" target="_blank"
-                                                        rel="noopener noreferrer">distance.to</a> e ingresa el valor en
-                                                    la unidad de medida seleccionada.
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="cmbTipoEnvio" class="form-label">Medio de transporte del
-                                                    paquete: </label>
-                                                <select name="" id="cmbTipoEnvio" class="form-select">
-                                                    <option value="ship" selected>Barco</option>
-                                                    <option value="train">Tren</option>
-                                                    <option value="truck">Camion</option>
-                                                    <option value="plane">Avion</option>
-                                                </select>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Visualizar</button>
-                                        </form>
-                                        <br>
-                                        <div id="mensajeCarbonEnvio">
-                                        </div>
-                                        <div id="resultadoCarbonEnvio" class="text-center">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Fin Modal Carbon Envio-->
-                    </article>
-                    <article>
-                        <div class="col">
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-4 d-flex align-items-center">
-                                        <img src="../img/openWeatherMap.png" class="img-fluid rounded-start" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">OpenWeatherMap</h5>
-                                            <h6 class="card-subtitle mb-2 text-muted">API que nos muestra las
-                                                condiciones climaticas,
-                                                dadas las coordenadas.
-                                            </h6>
-                                            <p class="card-text">
-                                                OpenWeatherMap es un servicio en línea, propiedad de OpenWeather Ltd,
-                                                que proporciona datos meteorológicos globales a través de la API,
-                                                incluyendo datos meteorológicos actuales, previsiones, nowcasts y datos
-                                                meteorológicos históricos para cualquier ubicación geográfica. La
-                                                empresa ofrece una previsión de precipitaciones hiperlocal minuto a
-                                                minuto para cualquier lugar. El modelo de aprendizaje automático
-                                                convolucional se utiliza para utilizar los servicios de difusión
-                                                meteorológica y los datos de las estaciones meteorológicas de los
-                                                aeropuertos, las estaciones de radar en tierra, los satélites
-                                                meteorológicos, los satélites de teledetección, los METAR y las
-                                                estaciones meteorológicas automatizadas.
-                                                <br>
-                                                <br>
-                                                Más información través de este web: <a
-                                                    href="https://openweathermap.org/" target="_blank"
-                                                    rel="noopener noreferrer">openweathermap.org</a>
-                                            </p>
-                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#modalWeather">Prueba de la API</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal Weather -->
-                        <div class="modal fade" id="modalWeather" tabindex="-1" aria-labelledby="textoModal"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="textoModal">Condiciones climaticas OpenWeather</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="#" id="formularioClima">
-                                            <div class="mb-3">
-                                                <label for="txtCiudadClima" class="form-label">Ciudad</label>
-                                                <input type="text" class="form-control" id="txtCiudadClima"
-                                                    aria-describedby="ciudadDesc" required
-                                                    pattern="^[^\s]+(\s+[^\s]+)*$">
-                                                <div id="ciudadDesc" class="form-text">
-                                                    Ingrese el nombre de una ciudad para visualizar el clima.
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="cmbPaises" class="form-label">Paises</label>
-                                                <select class="form-select" id="cmbPaises" aria-label="">
-                                                    <option selected>Seleccione un pais de la lista</option>
-                                                </select>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Visualizar</button>
-                                        </form>
-                                        <br>
-                                        <div id="resultadoClima" class="text-center">
-                                        </div>
-                                        <div id="mensajeClima">
-                                        </div>
-                                        <br>
-                                        <div id="mapaClima">
-
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Fin Modal Weather-->
-                    </article>
-                </div>
-            </div>
-        </main>
     </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <article>
+                    <div class="col">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <img src="../img/aqi-transparent.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">World Air Quality Index REST API</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">API para medir la calidad del
+                                            aire, en
+                                            distintas ciudades</h6>
+                                        <p class="card-text">
+                                            El proyecto del Índice Mundial de la Calidad del Aire es un
+                                            proyecto sin ánimo de lucro iniciado en 2007. Su misión es promover la
+                                            concienciación de los ciudadanos sobre la contaminación atmosférica y
+                                            proporcionar una información unificada y mundial sobre la calidad del
+                                            aire.
+
+                                            El proyecto proporciona información transparente sobre la calidad del
+                                            aire en
+                                            más de 130 países, cubriendo más de 30.000 estaciones en 2.000 ciudades
+                                            importantes.
+                                            <br>
+                                            <br>
+                                            Más información través de estos dos sitios web: <a href="https://aqicn.org"
+                                                target="_blank" rel="noopener noreferrer">aqicn.org</a>
+                                            y <a href="https://waqi.info" target="_blank"
+                                                rel="noopener noreferrer">waqi.info</a>.
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modalAQI">Prueba de la API</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalAQI" tabindex="-1" aria-labelledby="modalCalidadAire"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalCalidadAire">World Air Quality Index</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        En este modal tendras la oportunidad de probar la API
+                                    </p>
+                                    <p>
+                                        El índice de calidad del aire (ICA) es una cifra que proporcionan las
+                                        autoridades de una zona (normalmente urbana) y que refleja las cantidades de
+                                        contaminantes presentes en el aire.​ Cuando la calidad del aire es buena
+                                        (tiene pocos contaminantes), las personas pueden respirarlo indefinidamente
+                                        sin que su salud se vea afectada. Cuando es mala pueden darse irritaciones
+                                        oculares, todo tipo de problemas respiratorios e incluso cardíacos.
+                                    </p>
+                                    <form id="formularioAire">
+                                        <div class="mb-3">
+                                            <label for="txtCiudad" class="form-label">Ciudad</label>
+                                            <input type="text" class="form-control" id="txtCiudad"
+                                                aria-describedby="ciudadDesc" required>
+                                            <div id="ciudadDesc" class="form-text">
+                                                Ingrese el nombre de una ciudad para visualizar la calidad del aire.
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Visualizar</button>
+                                    </form>
+                                    <br>
+                                    <div id="mensajeAire">
+                                    </div>
+                                    <div id="resultadoCalidadAire" class="text-center">
+                                    </div>
+                                    <br>
+                                    <div id="mapaAire">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fin Modal Calidad Aire-->
+                </article>
+                <article>
+                    <div class="col">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <img src="../img/carbon.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Carbon Interface</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">API para medir nuestras emisiones
+                                            de carbono</h6>
+                                        <p class="card-text">
+                                            Usted está aquí porque quiere hacer que su aplicación sea más consciente
+                                            del clima. Nuestro objetivo en Carbon Interface es facilitar a los
+                                            desarrolladores la integración de estimaciones de emisiones de carbono
+                                            con respaldo científico en sus aplicaciones. De este modo, podemos crear
+                                            un software que reduzca las emisiones de carbono, frenando el cambio
+                                            climático.
+                                            &nbsp;
+                                            Carbon Interface ofrece dos APIs:
+                                            <br>
+                                            <br>
+                                            API de estimaciones:
+                                            La API de estimaciones facilita la generación de estimaciones precisas
+                                            de las emisiones de los vuelos, los vehículos, el transporte marítimo,
+                                            el consumo de electricidad y la combustión de combustibles.
+                                            <br>
+                                            <br>
+                                            API de Carbon Ledger:
+                                            La API Carbon Ledger facilita la generación de estimaciones precisas de
+                                            emisiones a partir de transacciones con tarjetas de crédito y débito.
+                                            <br>
+                                            <br>
+                                            Más información través de este sitio web: <a
+                                                href="https://www.carboninterface.com/" target="_blank"
+                                                rel="noopener noreferrer">carboninterface.com</a>
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modalCarbonEl">Prueba de la API Consumo</button>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modalCarbonEnvio">Prueba de Paquetes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal Carbon Electricidad-->
+                    <div class="modal fade" id="modalCarbonEl" tabindex="-1" aria-labelledby="textoModalCarbonEl"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="textoModalCarbonEl">Calculo de emisiones de carbono
+                                        Electricidad</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="#" id="formularioElectricidad">
+                                        <div class="mb-3">
+                                            <label for="cmbPaisesElectricidad" class="form-label">Paises soportados
+                                                por la API para medir emisiones de carbono
+                                                en base al consumo electrico
+                                            </label>
+                                            <select class="form-select" id="cmbPaisesElectricidad" aria-label=""
+                                                required>
+                                                <option selected value="">Seleccione un pais de la lista</option>
+                                                <option value="US">United States of America</option>
+                                                <option value="CA">Canada</option>
+                                                <option value="AT">Austria</option>
+                                                <option value="BE">Belgium</option>
+                                                <option value="BG">Bulgaria</option>
+                                                <option value="HR">Croatia</option>
+                                                <option value="CY">Cyprus</option>
+                                                <option value="CZ">Czechia</option>
+                                                <option value="DK">Denmark</option>
+                                                <option value="FI">Finland</option>
+                                                <option value="FR">France</option>
+                                                <option value="DE">Germany</option>
+                                                <option value="IR">Ireland</option>
+                                                <option value="IT">Italy</option>
+                                                <option value="NL">Netherlands</option>
+                                                <option value="ES">Spain</option>
+                                                <option value="SE">Sweden</option>
+                                                <option value="GB">United Kingdom</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cmbUnidadElectricidad" class="form-label">Unidad de Medida
+                                                de consumo Electrico</label>
+                                            <select name="" id="cmbUnidadElectricidad" class="form-select">
+                                                <option value="mwh" selected>Megavatios-hora (MW⋅h)</option>
+                                                <option value="kwh">Kilovatio-hora (KW⋅h)</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="txtConsumo" class="form-label">Consumo Electrico en <strong
+                                                    id="unidadSeleccionada">mwh</strong></label>
+                                            <input type="number" class="form-control" id="txtConsumo"
+                                                aria-describedby="descElectricidad" required step="any" min="1">
+                                            <div id="descElectricidad" class="form-text">
+                                                Ingrese el consumo de electricidad.
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Visualizar</button>
+                                    </form>
+                                    <br>
+                                    <div id="mensajeCarbonEl">
+                                    </div>
+                                    <div id="resultadoCarbonEl" class="text-center">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fin Modal Carbon Electricidad-->
+                    <!--Modal Carbon Envio-->
+                    <div class="modal fade" id="modalCarbonEnvio" tabindex="-1" aria-labelledby="textoModalCarbonEnvio"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="textoModalCarbonEnvio">Calculo de emisiones de
+                                        carbono Envio</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="#" id="formularioEnvio">
+                                        <div class="mb-3">
+                                            <label for="cmbUnidadEnvio" class="form-label">
+                                                Unidad de peso a utilizar para calcular el envio
+                                            </label>
+                                            <select class="form-select" id="cmbUnidadEnvio" aria-label="" required>
+                                                <option value="g" selected>gr</option>
+                                                <option value="lb">lb</option>
+                                                <option value="kg">Kg</option>
+                                                <option value="mt">toneladas</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputPeso" class="form-label">Peso del paquete en: <strong
+                                                    id="unidadSeleccionadaE">gr</strong></label>
+                                            <input type="number" class="form-control" id="inputPeso"
+                                                aria-describedby="descElectricidad" required min="1" step="any">
+                                            <div id="descElectricidad" class="form-text">
+                                                Ingrese el peso del paquete.
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cmbUnidadDistancia" class="form-label">Unidad de Distancia:
+                                            </label>
+                                            <select name="" id="cmbUnidadDistancia" class="form-select"
+                                                name="unidadDistancia">
+                                                <option selected value="mi">millas</option>
+                                                <option value="km">kilometros</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="inputDistancia" class="form-label">Distancia recorrida por
+                                                el paquete</label>
+                                            <input type="number" class="form-control" id="inputDistancia"
+                                                aria-describedby="descElectricidad" required min="1" step="any">
+                                            <div id="descElectricidad" class="form-text">
+                                                Si quieres obtener la distancia Exacta, revisa <a
+                                                    href="https://www.distance.to/" target="_blank"
+                                                    rel="noopener noreferrer">distance.to</a> e ingresa el valor en
+                                                la unidad de medida seleccionada.
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cmbTipoEnvio" class="form-label">Medio de transporte del
+                                                paquete: </label>
+                                            <select name="" id="cmbTipoEnvio" class="form-select">
+                                                <option value="ship" selected>Barco</option>
+                                                <option value="train">Tren</option>
+                                                <option value="truck">Camion</option>
+                                                <option value="plane">Avion</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Visualizar</button>
+                                    </form>
+                                    <br>
+                                    <div id="mensajeCarbonEnvio">
+                                    </div>
+                                    <div id="resultadoCarbonEnvio" class="text-center">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fin Modal Carbon Envio-->
+                </article>
+                <article>
+                    <div class="col">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4 d-flex align-items-center">
+                                    <img src="../img/openWeatherMap.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">OpenWeatherMap</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">API que nos muestra las
+                                            condiciones climaticas,
+                                            dadas las coordenadas.
+                                        </h6>
+                                        <p class="card-text">
+                                            OpenWeatherMap es un servicio en línea, propiedad de OpenWeather Ltd,
+                                            que proporciona datos meteorológicos globales a través de la API,
+                                            incluyendo datos meteorológicos actuales, previsiones, nowcasts y datos
+                                            meteorológicos históricos para cualquier ubicación geográfica. La
+                                            empresa ofrece una previsión de precipitaciones hiperlocal minuto a
+                                            minuto para cualquier lugar. El modelo de aprendizaje automático
+                                            convolucional se utiliza para utilizar los servicios de difusión
+                                            meteorológica y los datos de las estaciones meteorológicas de los
+                                            aeropuertos, las estaciones de radar en tierra, los satélites
+                                            meteorológicos, los satélites de teledetección, los METAR y las
+                                            estaciones meteorológicas automatizadas.
+                                            <br>
+                                            <br>
+                                            Más información través de este web: <a href="https://openweathermap.org/"
+                                                target="_blank" rel="noopener noreferrer">openweathermap.org</a>
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#modalWeather">Prueba de la API</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Weather -->
+                    <div class="modal fade" id="modalWeather" tabindex="-1" aria-labelledby="textoModal"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="textoModal">Condiciones climaticas OpenWeather</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="#" id="formularioClima">
+                                        <div class="mb-3">
+                                            <label for="txtCiudadClima" class="form-label">Ciudad</label>
+                                            <input type="text" class="form-control" id="txtCiudadClima"
+                                                aria-describedby="ciudadDesc" required pattern="^[^\s]+(\s+[^\s]+)*$">
+                                            <div id="ciudadDesc" class="form-text">
+                                                Ingrese el nombre de una ciudad para visualizar el clima.
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cmbPaises" class="form-label">Paises</label>
+                                            <select class="form-select" id="cmbPaises" aria-label="">
+                                                <option selected>Seleccione un pais de la lista</option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Visualizar</button>
+                                    </form>
+                                    <br>
+                                    <div id="resultadoClima" class="text-center">
+                                    </div>
+                                    <div id="mensajeClima">
+                                    </div>
+                                    <br>
+                                    <div id="mapaClima">
+
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Fin Modal Weather-->
+                </article>
+            </div>
+        </div>
+    </main>
+    <br>
+    <footer class="container">
+        <p class="float-end"><a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a></p>
+        <p>&copy; 2021 Katherine Castillo - Roberto Marquez - Geovanny Martinez. &middot;</p>
+    </footer>
     <script src="../js/about.js" type="module"></script>
 </body>
 
