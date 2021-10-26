@@ -1,68 +1,40 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
-#weatherWrapper{
-	width: 400px;
-	margin: 100px auto;
+.hora {
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
 }
-.weatherCard{
-	width: 400px;
-	height: 200px;
+
+/*---------------------*/
+.clima-card {
+	background-color: #0093E9;
+	background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+	color: white;
+	border-radius: 10px;
 	font-family: 'Open Sans';
-	position: relative;
 }
-.currentTemp{
-	width: 220px;
-	height: 200px;
-	background: rgb(41, 41, 41);
-	position: absolute;
-	top: 0;
-	left: 0;
+
+.pais {
+	background-color: rgb(8, 5, 0);
+	border-radius: 10px;
+	font-size: 25px;
 }
-.currentWeather{
-	width: 180px;
-	height: 200px;
-	background: rgb(255, 255, 255);
-	margin: 0;
-	position: absolute;
-	top: 0;
-	right: 0;
+
+
+.description {
+	text-transform: capitalize;
 }
-.temp{
-	font-size: 80px;
-	text-align: center;
-	display: block;
-	font-weight: 300;
-	color: rgb(255, 255, 255);
-	padding: 20px 0 0;
-}
-.location{
-	color: rgb(255, 255, 255);
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 20px;
-	display: block;
-}
-.description{
-	font-size: 20px;
-	text-transform: uppercase;
-	text-align: center;
-}
-.conditions{
-	font-family: weathericons;
-	font-size: 80px;
-	display: block;
-	padding: 20px 0 0;
-	text-align: center;
-}
-.info{
-	width: 180px;
-	height: 50px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: rgb(42, 178, 234);
-	font-weight: 700;
-	color: rgb(255, 255, 255);
-	text-align: center;
-}
+
+.div-temperatura {
+	display: table;
+  }
+  
+.icon-temp {
+	vertical-align: middle;
+	display: table-cell;
+  }
+.temp {
+	vertical-align: middle;
+	display: table-cell;
+  }

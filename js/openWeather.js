@@ -8,7 +8,7 @@ class OpenWeather {
 
     consultarAPI() {
         const appID = '383fbfeebb99e92072fd1384ab4d1dc1'
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.ciudad},${this.pais}&appid=${appID}&lang=es`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.ciudad},${this.pais}&appid=${appID}&lang=es&units=metric`;
         UI.spinner(UI.resultadoClima);
         fetch(url)
             .then(respuesta => respuesta.json())
@@ -46,8 +46,12 @@ class OpenWeather {
                         clouds: {
                             all
                         },
+                        sys: {
+                            country
+                        },
                         dt,
-                        timezone
+                        timezone,
+                        name
 
                     } = resultado;
                     console.log(resultado);
@@ -63,34 +67,34 @@ class OpenWeather {
                     const utc = localTime + localOffset
                     var hora = utc + (1000 * timezone)
                     const nd = new Date(hora)
-                    //Hora
+                    //Limpiamos antes de refrescar la informacion
                     UI.limpiarChildrens(UI.resultadoClima);
                     UI.limpiarChildrens(UI.mensajeclima);
+                    //agregamos las clases necesarias
                     UI.resultadoClima.setAttribute('class', 'mx-auto', 'text-center');
                     const texto = document.createElement('p');
-                    texto.setAttribute('class', 'description','animacion');
+                    //Texto que dice la hora
+                    texto.classList.add('hora', 'animacion');
                     texto.innerHTML = `
-                    <p class="description">
-                        descripción: ${weather[0].description}
                         <br>
-                        hora: ${nd.getHours()}:${nd.getMinutes()}
-                    </p>`;
+                        hora local: ${nd.getHours()}:${nd.getMinutes()}`;
+                    //Card del clima
                     const climaCard = document.createElement('div');
-                    climaCard.classList.add('weatherCard', 'text-center', 'mx-auto','animacion');
+                    climaCard.classList.add('animacion');
                     climaCard.innerHTML = `
-                        <div class="currentTemp">
-                            <span class="temp">${kelvinToCelcius(temp)}&#176;</span>
-                            <span class="location">${this.ciudad}</span>
+                    <div class="col-auto text-center clima-card">
+                    <h1 class="text-center my-4"> <i class="bi bi-pin-map"></i> &nbsp;${name}<sup class="pais px-2">${country}</sup></h1>
+                    <div class="card-body text-center">
+                        <div class="div-temperatura text-center mx-auto">
+                            <img class="icon-temp" src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png" alt="${weather[0].main}">
+                            <h1 class="temp"><b>${temp}</b><span>&#8451;</span></h1>
                         </div>
-                        <div class="currentWeather">
-                            <span class="conditions">
-                            <img src="https://openweathermap.org/img/wn/${weather[0].icon}@2x.png">
-                            </span>
-                            <div class="info">
-                                <span>Presion: ${pressure} mb</span>
-                                <span>Humedad: ${humidity}%</span>
-                            </div>
-                        </div>`
+                        <h3 class="description">${weather[0].description}</h3>
+                        <span>Presion: ${pressure} mb</span>
+                        <span>Humedad: ${humidity}%</span>
+                    </div>
+                    </div>
+                    `
                     UI.resultadoClima.appendChild(texto);
                     UI.resultadoClima.appendChild(climaCard);
                     //Mapa Leaflet
@@ -99,8 +103,7 @@ class OpenWeather {
                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
                     }).addTo(map);
                     L.marker([lat, lon]).addTo(map)
-                        .bindPopup(`Clima en ${this.ciudad}: ${kelvinToCelcius(temp)}	
-                        &#8451;`)
+                        .bindPopup(`Clima en ${name}: ${temp}&#8451;`)
                         .openPopup();
                     map.dragging.disable();
                 }
