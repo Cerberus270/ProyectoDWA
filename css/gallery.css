@@ -1,0 +1,16 @@
+.jumbotron {
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0;
+  }
+
+  .gallery {
+    padding: 40px;
+  }
+
+  .gallery img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    margin-top: 0.5em;
+  }
