@@ -5,7 +5,7 @@ class CalidadAire {
         this.ciudad = ciudad;
     }
     consultarAPI() {
-        const url = `http://api.waqi.info/feed/${this.ciudad}/?token=2464eb8087a61b8528cc77bf2a57a34219a68a1a`;
+        const url = `https://api.waqi.info/feed/${this.ciudad}/?token=2464eb8087a61b8528cc77bf2a57a34219a68a1a`;
         UI.spinner(UI.resultadoCalidadAire);
         fetch(url)
             .then(respuesta => respuesta.json())
