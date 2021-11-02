@@ -120,6 +120,11 @@ hr {
     margin: 2rem 0;
 }
 
+/*Padding para Botones*/
+.espacioBtn{
+    margin-top: 10px;
+}
+
 /*Fondo del formulario Contacto*/
 #apiFondo {
     font-family: 'Open Sans';
