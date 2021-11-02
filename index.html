@@ -195,7 +195,7 @@
                         <div class="col-md-5 order-md-1 d-flex align-center">
                             <img src="img/Greenhouse_Effect_rev_es.svg" class="img-fluid hover"
                                 alt="Efectos del calentamiento Global" data-bs-toggle="modal"
-                                data-bs-target="#modalEfecto">
+                                data-bs-target="#modalEfecto" loading="lazy">
                         </div>
                     </div>
                     <div class="modal fade" id="modalEfecto" tabindex="-1" aria-labelledby="labelEfecto"
@@ -322,11 +322,16 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="mx-auto text-center">
-                                        <img src="img/b2ap3_large_formato-blog.jpg" class="img-fluid"
-                                            alt="Gases contaminantes">
+                                        <div class="iframe-container">
+                                            <iframe width="600" height="400"
+                                                src="https://www.youtube.com/embed/JQHtjT-_c7U"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
+                                        </div>
                                     </div>
                                     <p>
-                                        <h5 class="text-center">Revisa la imagen para mas información</h5>
+                                        <h5 class="text-center">Revisa el video para mas información</h5>
                                         <br>
                                         La Convención Marco de las Naciones Unidas sobre el Cambio Climático entró en
                                         vigor el 21 de marzo de 1994. Hoy en día, tiene una membresía casi universal.
@@ -574,10 +579,29 @@
     <footer class="text-center align-bottom">
         <div class="text-center container p-3">
             <hr>
-            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable
+            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable &nbsp;
             <a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a>
         </div>
     </footer>
+    <script>
+        $(window).on('load', function () {
+            // Animaton when load is complete
+            $(".loader").fadeOut("slow");
+            let tl = gsap.timeline({
+
+            })
+            tl.fromTo("#apiFondo", {
+                opacity: 0,
+                y: -200,
+            }, {
+                delay: 0.5,
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: 'bounce',
+            });
+        });
+    </script>
 </body>
 
 </html>

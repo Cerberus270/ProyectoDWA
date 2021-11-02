@@ -21,7 +21,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
     <title>Cambio Climático</title>
     <script src="../resources/jquery-3.6.0.min.js"></script>
-    <script src="../js/preloader.js"></script>
+    <!-- <script src="../js/preloader.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -63,7 +66,7 @@
     </header>
     <main>
         <div class="container-fluid">
-            <div class="jumbotron">
+            <div class="jumbotron" id="mensaje">
                 <h1>Una imagen vale mas que mil palabras </h1>
                 <p>
                     Como dice el título, si después de leer, ver videos o escuchar de expertos las terribles
@@ -185,7 +188,7 @@
     <footer class="text-center align-bottom">
         <div class="text-center container p-3">
             <hr>
-            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable
+            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable &nbsp;
             <a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a>
         </div>
     </footer>
@@ -196,6 +199,26 @@
             captions: function (element) {
                 return element.getElementsByTagName('img')[0].alt;
             }
+        });
+    </script>
+    <script>
+        $(window).on('load', function () {
+            // Animaton when load is complete
+            $(".loader").fadeOut("slow");
+            let tl = gsap.timeline({
+
+            })
+            tl.fromTo("main", {
+                opacity: 0,
+                scale: 1.0,
+            }, {
+                delay: 0.5,
+                scale: 1,
+                opacity: 1,
+                duration: 1.0,
+                ease: 'circ',
+                x: 0,
+            });
         });
     </script>
 </body>

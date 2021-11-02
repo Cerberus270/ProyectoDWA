@@ -15,8 +15,8 @@
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
-
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <!-- GetButton.io widget -->
     <script type="text/javascript">
         (function () {
@@ -51,7 +51,7 @@
         })();
     </script>
     <script src="../resources/jquery-3.6.0.min.js"></script>
-    <script src="../js/preloader.js"></script>
+    <!-- <script src="../js/preloader.js"></script> -->
     <title>Cambio Climático</title>
 </head>
 
@@ -93,8 +93,12 @@
         </nav>
     </header>
     <main>
+        <div class="container-fluid  d-flex align-items-center justify-content-center text-center" id="apiFondo">
+            <h1>¿Tienes alguna idea de cómo mejorar o quieres contribuir?</h1>
+        </div>
         <div class="container-xxl">
             <section>
+                <br>
                 <div id="contacto">
                     <form id="formularioContacto">
                         <h3>
@@ -143,7 +147,7 @@
                             </div>
                         </div>
                         <br>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-outline-success">Enviar</button>
                     </form>
                 </div>
             </section>
@@ -156,12 +160,37 @@
     <footer class="text-center align-bottom">
         <div class="text-center container p-3">
             <hr>
-            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable
+            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable &nbsp;
             <a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a>
         </div>
     </footer>
     <script src="../js/correo.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(window).on('load', function () {
+            // Animaton when load is complete
+            $(".loader").fadeOut("slow");
+            let tl = gsap.timeline({
+
+            })
+            tl.fromTo("#apiFondo", {
+                opacity: 0,
+                y: -200,
+            }, {
+                delay: 0.5,
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                ease: 'bounce',
+            });
+            tl.fromTo("#contacto", {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                duration: 0.5,
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -120,6 +120,19 @@ hr {
     margin: 2rem 0;
 }
 
+/*Fondo del formulario Contacto*/
+#apiFondo {
+    font-family: 'Open Sans';
+    font-size: clamp(4vh, 4vw, 10vh);
+    font-weight: 900;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1687,w_3000,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1497329419/170612-tolan-climate-change-tease_djvpu6');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: clamp(10vh, 50vw, 50vh);
+}
+
 /* RESPONSIVE CSS
 Bootstrap documentation, explanation:
 when the size of screen is above 62em
@@ -181,6 +194,7 @@ the font size will be reduced at 40px
     opacity: 0.7;
 }
 
+/*Iframe de YT Responsive*/
 
 .iframe-container {
     position: relative;
@@ -197,6 +211,7 @@ the font size will be reduced at 40px
     height: 100%;
 }
 
+/*Gif de Loader*/
 .loader {
     position: fixed;
     left: 0px;
