@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <link rel="icon" href="resources/0-1104_tree-planting-color-wood-arecaceae-school-trees-clipart.png"
-        type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
     </script>
     <script src="resources/jquery-3.6.0.min.js"></script>
-    <script src="js/preloader.js"></script>
+    <!-- <script src="js/preloader.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"
+        integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Cambio Climático</title>
 </head>
 
@@ -59,7 +60,7 @@
     </header>
     <div class="loader"></div>
     <main>
-        <section>
+        <section id="section1">
             <div class="container py-3">
                 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
@@ -72,7 +73,7 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="img/earth-asking-for-help.jpg" class="d-block w-100" alt="...">
+                            <img src="img/earth-asking-for-help.webp" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Gases de Efecto Invernadero</h5>
                                 <p>La calidad de aire se ve fuertemente afectada por la emision de gases de efecto
@@ -80,14 +81,14 @@
                             </div>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <img src="img/climatechange11.jpg" class="d-block w-100" alt="...">
+                            <img src="img/climatechange11.webp" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>La temperatura global aumenta...</h5>
                                 <p>Si la temperatura global sigue aumentando habra un punto de no retorno.</p>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/feeling-the-heat.jpg" class="d-block w-100" alt="...">
+                            <img src="img/feeling-the-heat.webp" class="d-block w-100" alt="...">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5 style="color: #FFFF;">Todos estamos en el mismo planeta</h5>
                                 <p style="color: #FFFF;">Imagina tener una manta todo el dia, asi nos sentiremos si no
@@ -108,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="section2">
             <div class="container text-center">
                 <figure>
                     <blockquote class="blockquote">
@@ -121,7 +122,7 @@
                 </figure>
             </div>
         </section>
-        <section>
+        <section id="section3">
             <div class="container">
                 <div class="container">
                     <hr class="divisor">
@@ -137,7 +138,7 @@
                             </p>
                         </div>
                         <div class="col-md-5 align-center d-flex">
-                            <img src="img/efecto-invernadero-interior-sostenible.jpg" class="img-fluid hover"
+                            <img src="img/efecto-invernadero-interior-sostenible.webp" class="img-fluid hover"
                                 alt="Gases de Efecto Invernadero" data-bs-toggle="modal" data-bs-target="#modalGases">
                         </div>
                     </div>
@@ -195,7 +196,7 @@
                         <div class="col-md-5 order-md-1 d-flex align-center">
                             <img src="img/Greenhouse_Effect_rev_es.svg" class="img-fluid hover"
                                 alt="Efectos del calentamiento Global" data-bs-toggle="modal"
-                                data-bs-target="#modalEfecto" loading="lazy">
+                                data-bs-target="#modalEfecto">
                         </div>
                     </div>
                     <div class="modal fade" id="modalEfecto" tabindex="-1" aria-labelledby="labelEfecto"
@@ -249,7 +250,7 @@
                             </p>
                         </div>
                         <div class="col-md-5 d-flex align-center">
-                            <img src="img/1080x1080_layers_753905.jpg" class="img-fluid hover" alt="Infografia &#8451;"
+                            <img src="img/1080x1080_layers_753905.webp" class="img-fluid hover" alt="Infografia &#8451;"
                                 data-bs-toggle="modal" data-bs-target="#modalLimite">
                         </div>
                     </div>
@@ -262,7 +263,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="img/1080x1080_layers_753905.jpg" class="img-fluid"
+                                    <img src="img/1080x1080_layers_753905.webp" class="img-fluid"
                                         alt="Gases contaminantes">
                                     <p>
                                         <h5 class="text-center">Revisa la imagen para mas información</h5>
@@ -308,7 +309,7 @@
                                 climático.</p>
                         </div>
                         <div class="col-md-5 d-flex align-center">
-                            <img src="img/512x512bb.jpg" class="img-fluid hover" alt="UNFCCC" data-bs-toggle="modal"
+                            <img src="img/512x512bb.webp" class="img-fluid hover" alt="UNFCCC" data-bs-toggle="modal"
                                 data-bs-target="#modalCmnu">
                         </div>
                     </div>
@@ -347,7 +348,7 @@
                         </div>
                     </div>
 
-                    <div class="modal fade" id="modalEfecto" tabindex="-1" aria-labelledby="labelEfecto"
+                    <!-- <div class="modal fade" id="modalEfecto" tabindex="-1" aria-labelledby="labelEfecto"
                         aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
@@ -376,7 +377,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <hr class="divisor">
 
@@ -409,7 +410,7 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="img/1 Av7_4Ne0HZshu79I-TGR5Q.jpeg" class="img-fluid"
+                                    <img src="img/1 Av7_4Ne0HZshu79I-TGR5Q.webp" class="img-fluid"
                                         alt="Gases contaminantes">
                                     <p>
                                         El Protocolo de Kyoto fue aprobado el 11 de diciembre de 1997. Debido a un
@@ -461,7 +462,7 @@
                             </p>
                         </div>
                         <div class="col-md-5 d-flex align-center">
-                            <img src="img/s960_climateconference.jpg" class="img-fluid hover"
+                            <img src="img/s960_climateconference.webp" class="img-fluid hover"
                                 alt="Acuerdo de Paris 2015" data-bs-toggle="modal" data-bs-target="#modalParis">
                         </div>
                     </div>
@@ -580,7 +581,11 @@
         <div class="text-center container p-3">
             <hr>
             © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable &nbsp;
-            <a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                </svg></a>
         </div>
     </footer>
     <script>
@@ -590,15 +595,22 @@
             let tl = gsap.timeline({
 
             })
-            tl.fromTo("#apiFondo", {
+            tl.fromTo("#section1", {
                 opacity: 0,
-                y: -200,
+                scale: 0.5
             }, {
                 delay: 0.5,
-                y: 0,
+                scale: 1,
                 opacity: 1,
-                duration: 0.8,
-                ease: 'bounce',
+                duration: 0.5,
+            });
+            tl.fromTo("#section2", {
+                opacity: 0,
+            }, {
+                delay: 1,
+                scale: 1,
+                opacity: 1,
+                duration: 1,
             });
         });
     </script>

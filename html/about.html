@@ -7,15 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Estilos Locales-->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/weather.css">
-    <!--Bootstrap Icons-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/weather.css">
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <link rel="icon" href="../resources/0-1104_tree-planting-color-wood-arecaceae-school-trees-clipart.png"
-        type="image/x-icon">
+        <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous">
@@ -313,8 +310,8 @@
                                             <label for="inputPeso" class="form-label">Peso del paquete en: <strong
                                                     id="unidadSeleccionadaE">gr</strong></label>
                                             <input type="number" class="form-control" id="inputPeso"
-                                                aria-describedby="descElectricidad" required min="1" step="any">
-                                            <div id="descElectricidad" class="form-text">
+                                                aria-describedby="descPesoPaquete" required min="1" step="any">
+                                            <div id="descPesoPaquete" class="form-text">
                                                 Ingrese el peso del paquete.
                                             </div>
                                         </div>
@@ -331,8 +328,8 @@
                                             <label for="inputDistancia" class="form-label">Distancia recorrida por
                                                 el paquete</label>
                                             <input type="number" class="form-control" id="inputDistancia"
-                                                aria-describedby="descElectricidad" required min="1" step="any">
-                                            <div id="descElectricidad" class="form-text">
+                                                aria-describedby="descDistancia" required min="1" step="any">
+                                            <div id="descDistancia" class="form-text">
                                                 Si quieres obtener la distancia Exacta, revisa <a
                                                     href="https://www.distance.to/" target="_blank"
                                                     rel="noopener noreferrer">distance.to</a> e ingresa el valor en
@@ -419,8 +416,8 @@
                                         <div class="mb-3">
                                             <label for="txtCiudadClima" class="form-label">Ciudad</label>
                                             <input type="text" class="form-control" id="txtCiudadClima"
-                                                aria-describedby="ciudadDesc" required pattern="^[^\s]+(\s+[^\s]+)*$">
-                                            <div id="ciudadDesc" class="form-text">
+                                                aria-describedby="Clima" required pattern="^[^\s]+(\s+[^\s]+)*$">
+                                            <div id="ciudadDescClima" class="form-text">
                                                 Ingrese el nombre de una ciudad para visualizar el clima.
                                             </div>
                                         </div>
@@ -459,7 +456,11 @@
         <div class="text-center container p-3">
             <hr>
             © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable &nbsp;
-            <a href="#"><i class="bi bi-chevron-up" style="font-size: 2rem;"></i></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+                </svg></a>
         </div>
     </footer>
     <script src="../js/about.js" type="module"></script>
