@@ -194,6 +194,10 @@ the font size will be reduced at 40px
     opacity: 0.7;
 }
 
+.lead{
+    text-align: justify;
+}
+
 /*Iframe de YT Responsive*/
 
 .iframe-container {
@@ -225,6 +229,18 @@ the font size will be reduced at 40px
 /*Hover Navbar*/
 .navbar .navbar-nav .nav-link:hover {
     color: #FFFF;
+}
+
+/*YT images hover*/
+.play-youtube-video{
+    transition: transform .2s;
+}
+
+.play-youtube-video:hover{
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    cursor: pointer;
+    transform: scale(1);
 }
 
 @media only screen and (min-width: 960px) {
