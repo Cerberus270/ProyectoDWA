@@ -17,7 +17,8 @@
     </script>
     <!--Estilo para la galeria-->
     <link rel="stylesheet" href="../css/gallery.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" media>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
+        media>
     <title>Cambio Climático</title>
     <script src="../resources/jquery-3.6.0.min.js"></script>
     <!-- <script src="../js/preloader.js"></script> -->
@@ -64,7 +65,7 @@
         </nav>
     </header>
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid" id="anima">
             <div class="jumbotron" id="mensaje">
                 <h1>Una imagen vale mas que mil palabras </h1>
                 <p class="lead">
@@ -187,7 +188,7 @@
     <footer class="text-center align-bottom">
         <div class="text-center container p-3">
             <hr>
-            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Cerberus, Diseño Web Adaptable &nbsp;
+            © 2021 Copyright Katherine Yamileth - Roberto Marquez - Geovanny Martinez, Diseño Web Adaptable &nbsp;
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-chevron-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -211,16 +212,14 @@
             let tl = gsap.timeline({
 
             })
-            tl.fromTo("main", {
+            tl.fromTo("#anima", {
                 opacity: 0,
-                scale: 1.0,
+                y: -200,
             }, {
-                delay: 0.5,
-                scale: 1,
+                delay: 0.8,
+                y: 0,
                 opacity: 1,
-                duration: 1.0,
-                ease: 'circ',
-                x: 0,
+                duration: 0.5,
             });
         });
     </script>
