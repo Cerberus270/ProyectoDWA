@@ -4,8 +4,6 @@ export const formularioAire = document.querySelector('#formularioAire'),
     resultadoCalidadAire = document.querySelector('#resultadoCalidadAire'),
     mapaAire = document.querySelector('#mapaAire');
 
-//export const prueba = document.querySelector('#prueba');
-
 export const modalAQI = document.getElementById('modalAQI'),
        modalCarbonEl = document.getElementById('modalCarbonEl'),
        modalCarbonEnvio = document.getElementById('modalCarbonEnvio'),
@@ -40,7 +38,7 @@ export const formularioEnvio = document.querySelector('#formularioEnvio'),
        resultadoCarbonEnvio = document.querySelector('#resultadoCarbonEnvio');
 
 export function alert(message, type, parent) {
-    var alerta = document.createElement('div')
+    var alerta = document.createElement('div');
     alerta.innerHTML = '<div class="alert alert-' + type + ' animacion" role="alert">' + message + '</div>';
     parent.append(alerta);
 }

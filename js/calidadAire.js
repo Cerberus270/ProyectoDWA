@@ -23,6 +23,7 @@ class CalidadAire {
                     } = resultado;
                     console.log(aqi);
                     console.log(geo);
+                    //Borro el resultado anterior
                     UI.limpiarChildrens(UI.resultadoCalidadAire);
                     UI.limpiarChildrens(UI.mensajeAire);
                     var container = L.DomUtil.get('mapaAire');
@@ -34,6 +35,7 @@ class CalidadAire {
                     if (aqi > 0 && aqi <= 50) {
                         UI.resultadoCalidadAire.classList.add('aqiGood', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">GREEN<br>Rango: 0-50<br>AQI: ${aqi}<br><small>La Calidad de Aire es BUENA</small></p>`;
+                        //Inner HTML al contenedor
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
                         var map = L.map('mapaAire').setView(geo, 10);
@@ -81,6 +83,7 @@ class CalidadAire {
                         const parrafo = `<p class="fs-4 fw-bold">RED<br>Rango: 151-200<br>AQI: ${aqi}<br><small>La Calidad de Aire es POCO SALUDABLE</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
                         //API Geolocalizacion
+                        //Se selecciona el contenedor donde estara el mapa
                         var map = L.map('mapaAire').setView(geo, 10);
 
                         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -90,7 +93,7 @@ class CalidadAire {
                         L.marker(geo).addTo(map)
                             .bindPopup('POCO SALUDABLE')
                             .openPopup();
-                    } else if (aqi >= 151 && aqi <= 200) {
+                    } else if (aqi >= 201 && aqi <= 300) {
                         UI.resultadoCalidadAire.classList.add('aqiVeryUnhealthy', 'mx-auto', 'text-center','animacion');
                         const parrafo = `<p class="fs-4 fw-bold">PURPLE<br>Rango: 201-300<br>AQI: ${aqi}<br><small>La Calidad de Aire es MUY POCO SALUDABLE</small></p>`;
                         UI.resultadoCalidadAire.innerHTML = parrafo;
@@ -134,8 +137,11 @@ class CalidadAire {
                         return;
                     }
                 } else {
+                    console.log(resultado);
+                    //Se llaman las funciones desde los selectores
                     UI.limpiarChildrens(UI.resultadoCalidadAire);
                     UI.limpiarChildrens(UI.mensajeAire);
+                    //Se limpia el mapa
                     var container = L.DomUtil.get('mapaAire');
                     if (container != null) {
 
@@ -143,6 +149,7 @@ class CalidadAire {
 
                     }
                     UI.limpiarChildrens(UI.mapaAire);
+                    //Imprimir Alerta
                     UI.alert('Ingreso una ciudad no valida', 'danger', UI.mensajeAire);
                     return;
                 }

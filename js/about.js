@@ -2,13 +2,15 @@ import * as UI from './selectores.js';
 import CalidadAire from './calidadAire.js';
 import OpenWeather from './openWeather.js';
 import CarbonInterfaceElectricidad from './carbonInterfaceElectricidad.js';
-import CarbonInterfaceEnvio from './carbonInterfaceEnvios.js'
+import CarbonInterfaceEnvio from './carbonInterfaceEnvios.js';
 
+//Listeners de los formularios
 UI.formularioAire.addEventListener('submit', buscarCalidadAire);
 UI.formularioClima.addEventListener('submit', buscarClima);
 UI.formularioelectricidad.addEventListener('submit', buscarEmisiones);
 UI.formularioEnvio.addEventListener('submit', buscarEmisionesEnvio);
 
+//Se llenan los paises en el select de openweather
 document.addEventListener('DOMContentLoaded', UI.llenarPaises(UI.cmbPaises));
 
 //Listeners para cuando se cierre el modal se limpie el contenido, la clase es hide.bs.modal
@@ -46,6 +48,7 @@ UI.modalWeather.addEventListener('hide.bs.modal', e => {
     UI.formularioClima.reset();
 })
 
+//Listener cuando contenido en select
 UI.cmbUnidadElectricidad.addEventListener('change', (e) => {
     UI.unidadSeleccionada.textContent = e.target.value;
 })
