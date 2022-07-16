@@ -1,5 +1,5 @@
 # Climate Change Landing Page
-Landin Page to raise awareness about climate change with information about topics of interest, made with [Bootstrap](https://getbootstrap.com/) and [GSAP](https://greensock.com/gsap/) for animations as well as using different APIs, the gallery part uses [baguetteBox.js](https://feimosi.github.io/baguetteBox.js/).
+Landing Page to raise awareness about climate change with information about topics of interest, made with [Bootstrap](https://getbootstrap.com/) and [GSAP](https://greensock.com/gsap/) for animations as well as using different APIs, the gallery part uses [baguetteBox.js](https://feimosi.github.io/baguetteBox.js/).
 
 ## Home 
 
